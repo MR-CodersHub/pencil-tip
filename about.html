@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Discover the story, mission, and learning philosophy of Pencil Tip Academy of Art. Meet our faculty of master artists and explore our vertical timeline of milestones.">
   <title>About Our Academy | Pencil Tip Academy of Art</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -37,22 +39,6 @@
         <li><a href="gallery.html" class="nav-link">Gallery</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
-      <!-- User Account -->
-      <div class="user-account" id="userAccount">
-        <button class="user-profile-btn" id="userProfileBtn" aria-label="Open user account menu" aria-expanded="false" aria-haspopup="true">
-          <svg class="user-avatar" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="22" cy="22" r="22" fill="#F5EBE1"/>
-            <circle cx="22" cy="17" r="7" fill="#D45D3B" opacity="0.85"/>
-            <ellipse cx="22" cy="34" rx="11" ry="7" fill="#D45D3B" opacity="0.7"/>
-          </svg>
-        </button>
-        <div class="user-dropdown" id="userDropdown" role="menu" aria-label="User account menu">
-          <ul class="user-dropdown-links">
-            <li role="none"><a href="login.html" role="menuitem" class="user-dropdown-link login-btn">Login</a></li>
-            <li role="none"><a href="signup.html" role="menuitem" class="user-dropdown-link signup-btn">Sign Up</a></li>
-          </ul>
-        </div>
-      </div>
       <div class="hamburger" id="hamburgerMenu">
         <span></span>
         <span></span>
@@ -419,61 +405,66 @@
   <section class="section-padding" id="instructors" style="background-color: var(--bg-secondary);">
     <div class="section-header reveal">
       <span class="subtitle">Master Faculty</span>
-      <h2>Meet the Mentors</h2>
+      <h2>Meet the Mentor</h2>
       <div class="art-divider"><span></span></div>
     </div>
 
-    <div class="faculty-grid">
-      <!-- Instructor 1 -->
-      <div class="faculty-card reveal">
-        <div class="faculty-img-wrapper">
-          <img src="images/faculty_1.png" alt="Alejandro V., Oil Painting Master Instructor at Pencil Tip">
-          <div class="faculty-socials">
-            <a href="#" aria-label="Website">WEB</a>
-            <a href="#" aria-label="Instagram">IG</a>
-            <a href="#" aria-label="ArtStation">AS</a>
-          </div>
-        </div>
-        <div class="faculty-info">
-          <h3>Alejandro V.</h3>
-          <span class="faculty-role">Head of Oil & Acrylic Painting</span>
-          <p>Exhibited across Paris and Rome, Alejandro specializes in Rembrandt glazing setups, chiaroscuro techniques, and anatomy studies.</p>
+    <div class="featured-mentor-container reveal">
+      <!-- Left Column: Portrait -->
+      <div class="featured-mentor-portrait-wrap">
+        <div class="featured-mentor-portrait">
+          <img src="images/faculty_2.png" alt="Elena Rostova, Master Watercolor & Sketching Instructor at Pencil Tip">
+          <div class="featured-mentor-experience-badge">15+ Years Exp</div>
         </div>
       </div>
 
-      <!-- Instructor 2 -->
-      <div class="faculty-card reveal">
-        <div class="faculty-img-wrapper">
-          <img src="images/faculty_2.png" alt="Elena Rostova, Sketching and Watercolor Instructor at Pencil Tip">
-          <div class="faculty-socials">
-            <a href="#" aria-label="Website">WEB</a>
-            <a href="#" aria-label="Instagram">IG</a>
-            <a href="#" aria-label="Behance">BE</a>
-          </div>
-        </div>
-        <div class="faculty-info">
-          <h3>Elena Rostova</h3>
-          <span class="faculty-role">Master of Sketching & Watercolor</span>
-          <p>With 12+ years in graphite drawing, Elena's classes focus on structural sketching, perspective rules, and dynamic wet washes.</p>
-        </div>
-      </div>
+      <!-- Right Column: Details -->
+      <div class="featured-mentor-details">
+        <span class="mentor-role">Master of Sketching & Watercolor</span>
+        <h3>Elena Rostova</h3>
+        <span class="mentor-spec">Gestural Drawing & Wet-on-Wet Watercolor Specialization</span>
 
-      <!-- Instructor 3 -->
-      <div class="faculty-card reveal">
-        <div class="faculty-img-wrapper">
-          <!-- Reusing studio or digital asset creatively for the third faculty layout -->
-          <img src="images/course_sculpture.png" alt="Marcus Vane, Ceramics and Sculpture Instructor at Pencil Tip">
-          <div class="faculty-socials">
-            <a href="#" aria-label="Website">WEB</a>
-            <a href="#" aria-label="Instagram">IG</a>
-            <a href="#" aria-label="Dribbble">DR</a>
+        <div class="featured-mentor-header-divider"></div>
+
+        <p class="mentor-bio">A celebrated illustrator and watercolorist trained at the Repin St. Petersburg State Academic Institute of Fine Arts, Elena Rostova brings over 15 years of studio teaching to Pencil Tip Academy. Her classes blend structural graphite precision with the luminous freedom of wet-on-wet watercolor — nurturing students from foundational mark-making to exhibition-ready compositions. Elena's botanical studies and gestural figure work have been published in leading international art journals.</p>
+
+        <span class="mentor-section-heading">Areas of Expertise</span>
+        <div class="mentor-badges">
+          <span class="badge">Watercolor</span>
+          <span class="badge">Structural Sketching</span>
+          <span class="badge">Perspective Drawing</span>
+          <span class="badge">Botanical Illustration</span>
+          <span class="badge">Floral Wet Washes</span>
+          <span class="badge">Life Drawing</span>
+        </div>
+
+        <div class="mentor-stats-row">
+          <div class="stat-item">
+            <span class="stat-val">980+</span>
+            <span class="stat-lbl">Students Mentored</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">35</span>
+            <span class="stat-lbl">Workshops Done</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">9</span>
+            <span class="stat-lbl">Active Courses</span>
           </div>
         </div>
-        <div class="faculty-info">
-          <h3>Marcus Vane</h3>
-          <span class="faculty-role">Head of Ceramics & Digital Art</span>
-          <p>Marcus bridges physical clay sculpting with immersive 3D digital concepts, tutoring creative anatomy structures and modeling cycles.</p>
+
+        <span class="mentor-section-heading">Teaching Philosophy</span>
+        <blockquote class="philosophy-blockquote">
+          "Patience and observation are the foundation of watercolor. Let the water guide your hand — but let your structure guide the water."
+        </blockquote>
+
+        <div class="mentor-socials-row">
+          <a href="#" aria-label="Website">Website</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Behance">Behance</a>
         </div>
+
+        <button class="view-full-profile-btn" id="btn-view-full-profile">View Full Profile</button>
       </div>
     </div>
   </section>
@@ -618,7 +609,25 @@
     </svg>
   </button>
 
+  <!-- Mentor Detailed Profile Modal -->
+  <div class="mentor-modal" id="mentorModal" aria-hidden="true" role="dialog" aria-labelledby="modalMentorName">
+    <div class="mentor-modal-backdrop" id="mentorModalBackdrop"></div>
+    <div class="mentor-modal-container">
+      <button class="mentor-modal-close" id="mentorModalCloseBtn" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="mentor-modal-body" id="mentorModalBody">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
   <!-- Main JavaScript File -->
   <script src="js/main.js?v=2"></script>
+  <!-- Faculty Showcase JavaScript File -->
+  <script src="js/faculty.js"></script>
 </body>
 </html>
