@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Unleash your creative potential at Pencil Tip Academy of Art. Learn painting, drawing, sculpture, digital design, and watercolor from master artists in our state-of-the-art studio environment.">
+  <title>Pencil Tip Academy of Art | Premium Art School & Creative Studio</title>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ==========================================
+       HEADER / NAVIGATION
+       ========================================== -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="headerLogo">
+        <div class="logo-icon-wrap">
+          <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20 70 C 10 50, 25 20, 60 20 C 85 20, 90 40, 80 60 C 70 80, 45 85, 30 80 C 15 75, 10 90, 20 90 C 35 90, 50 70, 75 70"
+              fill="none" stroke="var(--brand-primary)" stroke-width="6" stroke-linecap="round" opacity="0.95" />
+            <path d="M35 80 C 20 65, 35 35, 65 35 C 80 35, 80 50, 70 65" fill="none" stroke="var(--brand-secondary)"
+              stroke-width="4" stroke-linecap="round" opacity="0.75" />
+            <polygon points="70,30 80,40 50,70 40,60" fill="var(--bg-secondary)" stroke="var(--text-dark)"
+              stroke-width="2.5" stroke-linejoin="round" />
+            <polygon points="50,70 40,60 28,72" fill="#FAF6F0" stroke="var(--text-dark)" stroke-width="2.5"
+              stroke-linejoin="round" />
+            <polygon points="34,66 30,62 24,76" fill="var(--text-dark)" stroke="var(--text-dark)" stroke-width="1.5"
+              stroke-linejoin="round" />
+            <circle cx="85" cy="70" r="5" fill="var(--brand-primary)" />
+            <circle cx="75" cy="85" r="4" fill="var(--brand-secondary)" />
+            <circle cx="92" cy="45" r="3.5" fill="var(--accent)" />
+          </svg>
+        </div>
+        <div class="logo-text">Pencil Tip<span>Academy of Art</span></div>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="courses.html" class="nav-link">Courses</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <!-- User Account -->
+      <div class="user-account" id="userAccount">
+        <button class="user-profile-btn" id="userProfileBtn" aria-label="Open user account menu" aria-expanded="false"
+          aria-haspopup="true">
+          <svg class="user-avatar" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="22" fill="#F5EBE1" />
+            <circle cx="22" cy="17" r="7" fill="#D45D3B" opacity="0.85" />
+            <ellipse cx="22" cy="34" rx="11" ry="7" fill="#D45D3B" opacity="0.7" />
+          </svg>
+        </button>
+        <div class="user-dropdown" id="userDropdown" role="menu" aria-label="User account menu">
+          <ul class="user-dropdown-links">
+            <li role="none"><a href="login.html" role="menuitem" class="user-dropdown-link login-btn">Login</a></li>
+            <li role="none"><a href="signup.html" role="menuitem" class="user-dropdown-link signup-btn">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hamburger" id="hamburgerMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- Mobile Navigation Drawer -->
+      <div class="mob-nav-dropdown" id="mobNavDropdown">
+        <button class="mob-close-btn" id="mobCloseBtn" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <ul class="mob-dropdown-links">
+          <li><a href="index.html" class="mob-dropdown-link nav-link">Home</a></li>
+          <li><a href="about.html" class="mob-dropdown-link nav-link">About</a></li>
+          <li><a href="courses.html" class="mob-dropdown-link nav-link">Courses</a></li>
+          <li><a href="gallery.html" class="mob-dropdown-link nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="mob-dropdown-link nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- Mobile Nav Overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ==========================================
+       1. HERO SECTION (Immersive 3D Parallax Workspace)
+       ========================================== -->
+  <section class="hero">
+
+
+    <div class="hero-container">
+      <div class="hero-content reveal">
+        <span class="hero-tagline">Excellence in Fine Art Education</span>
+        <h1>Where Passion<br>Meets <span>Creative Mastery</span></h1>
+        <p>Embark on an immersive artistic journey at Pencil Tip. Our academy blends classical academic training with
+          contemporary experimental vision, empowering creators of all levels to find their unique voice and express it
+          beautifully.
+        </p>
+        <div class="hero-cta">
+          <a href="courses.html" class="btn btn-primary" id="heroBtnCourses">Explore Courses</a>
+          <a href="gallery.html" class="btn btn-secondary" id="heroBtnGallery">Visit Exhibition</a>
+        </div>
+      </div>
+
+      <div class="parallax-scene reveal">
+        <!-- Layer 1: Ambient light glow blob -->
+        <div class="parallax-layer" data-depth="0.2">
+          <div class="hero-glow-blob"></div>
+        </div>
+
+        <!-- Layer 2: Rotating SVG line-art circular elements -->
+        <div class="parallax-layer" data-depth="0.4">
+          <div class="geometric-grid-art">
+            <div class="geometric-ring"></div>
+            <div class="geometric-ring-inner"></div>
+          </div>
+        </div>
+
+        <!-- Layer 3: Realistic sunlit workspace 3D digital rendering -->
+        <div class="parallax-layer" data-depth="0.6">
+          <div class="workspace-base">
+            <img src="images/hero_workspace.png" alt="Pencil Tip Academy wood-easel artist workspace">
+          </div>
+        </div>
+
+        <!-- Layer 4: Interactive floating cards with textures -->
+        <div class="parallax-layer" data-depth="0.9">
+          <div class="floating-card card-left">
+            <img src="images/gallery_abstract.png" alt="Student oil abstract canvas painting">
+            <h4>Ethereal Terracotta</h4>
+            <p>Oil on Canvas</p>
+          </div>
+          <div class="floating-card card-right">
+            <img src="images/gallery_portrait.png" alt="Student charcoal shadow sketch portrait">
+            <h4>Charcoal Silhouette</h4>
+            <p>Life Sketch</p>
+          </div>
+        </div>
+
+        <!-- Layer 5: Decorative floating tools (paintbrush & sketch pencil) -->
+        <div class="parallax-layer" data-depth="1.2">
+          <!-- Paintbrush vector tool -->
+          <svg class="floating-tool brush" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 85 L35 65" stroke="#8B5A2B" stroke-width="6" stroke-linecap="round" />
+            <path d="M35 65 L45 55" stroke="#D2B48C" stroke-width="8" stroke-linecap="round" />
+            <path d="M45 55 L55 45" stroke="#C0C0C0" stroke-width="9" stroke-linecap="round" />
+            <path d="M55 45 Q70 30 75 15 Q60 20 45 35 Z" fill="#D45D3B" />
+            <path d="M70 20 Q75 15 80 10 Q65 15 60 25 Z" fill="#E07A5F" />
+          </svg>
+          <!-- Sketch pencil vector tool -->
+          <svg class="floating-tool pencil" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 15 L65 65" stroke="#E9C46A" stroke-width="7" stroke-linecap="round" />
+            <path d="M15 15 L22 22" stroke="#FAF6F0" stroke-width="7" stroke-linecap="round" />
+            <path d="M13 13 L17 17" stroke="#7E191B" stroke-width="7" stroke-linecap="round" />
+            <polygon points="65,65 73,73 70,60" fill="#CD853F" />
+            <polygon points="70,70 75,75 73,67" fill="#1E1B18" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ==========================================
+       3. INSPIRATIONAL INTRODUCTION (Manifesto)
+       ========================================== -->
+  <section class="manifesto-sec">
+    <!-- Decorative background elements -->
+    <div class="manifesto-bg-blob"></div>
+
+    <div class="manifesto-grid">
+      <div class="manifesto-content reveal">
+        <div class="manifesto-header">
+          <span class="subtitle">Our Artistic Mission</span>
+          <div class="art-divider left-aligned"><span></span></div>
+        </div>
+        <h2 class="manifesto-title">Crafting Visionary Minds, <span>Hand by Hand</span></h2>
+        <div class="manifesto-quote">
+          "True technique is the bridge that allows wild imagination to cross over into a permanent masterpiece."
+        </div>
+        <p class="manifesto-text">
+          At Pencil Tip Academy of Art, we go beyond typical classroom theory. We believe in raw tactile contact with
+          canvas, wood, clay, and pixels. Our pedagogical framework pairs classical foundations with contemporary
+          expression,
+          guiding you to explore fine art mechanics while establishing a strong, unique artistic voice.
+        </p>
+        <div class="manifesto-features">
+          <div class="manifesto-card reveal delay-1">
+            <div class="card-bg-number">01</div>
+            <!-- Brush stroke watermark inside card -->
+            <svg class="card-brush-stroke" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 25C25 15 55 5 95 20" stroke="var(--brand-primary)" stroke-width="4" stroke-linecap="round"
+                opacity="0.08" />
+            </svg>
+            <div class="manifesto-card-icon">
+              <!-- Classical/Traditional Art Icon (palette/brush drawing compass) -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 12l-8 8H3v-7l8-8h7z" />
+                <path d="M14 8l2 2" />
+                <path d="M9 13l2 2" />
+              </svg>
+            </div>
+            <div class="manifesto-card-content">
+              <h4>Classical Rigor</h4>
+              <p>Anatomy mapping, glaze chemistry, and light physics study models.</p>
+            </div>
+            <div class="card-glow-border"></div>
+          </div>
+          <div class="manifesto-card reveal delay-2">
+            <div class="card-bg-number">02</div>
+            <!-- Brush stroke watermark inside card -->
+            <svg class="card-brush-stroke" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 15C35 25 65 35 95 15" stroke="var(--brand-primary)" stroke-width="4" stroke-linecap="round"
+                opacity="0.08" />
+            </svg>
+            <div class="manifesto-card-icon">
+              <!-- Modern/Digital Art Icon (pencil/stylus) -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
+              </svg>
+            </div>
+            <div class="manifesto-card-content">
+              <h4>Modern Vision</h4>
+              <p>Digital styling tools, abstract compositions, and cross-medium exhibitions.</p>
+            </div>
+            <div class="card-glow-border"></div>
+          </div>
+        </div>
+      </div>
+      <div class="manifesto-media reveal">
+        <!-- Layered background art elements -->
+        <div class="media-backdrop-circle"></div>
+        <div class="media-backdrop-blob"></div>
+        <div class="manifesto-frame">
+          <img src="images/studio_interior.png" alt="Light-filled art studio inside Pencil Tip Academy">
+        </div>
+        <div class="manifesto-backdrop"></div>
+        <!-- Floating abstract brush stroke -->
+        <svg class="media-floating-stroke" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10,50 Q40,90 90,50" stroke="var(--brand-primary)" stroke-width="8" fill="none" opacity="0.15"
+            stroke-linecap="round" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. FEATURED CURRICULUM (Programs)
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--bg-secondary);">
+    <div class="section-header reveal">
+      <span class="subtitle">Featured Curriculum</span>
+      <h2>Begin Your Creative Expression</h2>
+      <div class="art-divider"><span></span></div>
+    </div>
+
+    <div class="courses-grid">
+      <!-- Course 1: Oil Painting -->
+      <div class="course-card reveal">
+        <div class="course-img-container">
+          <div class="course-img-wrapper">
+            <img src="images/course_oil.png" alt="Close-up of oil paints being applied on canvas">
+            <div class="course-img-overlay"></div>
+          </div>
+          <span class="course-tag">Painting</span>
+          <div class="course-price-badge">
+            <span class="price-amount">$450</span>
+          </div>
+        </div>
+        <div class="course-content">
+          <div class="course-header-meta">
+            <span>
+              <svg class="meta-icon" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.85 2.22-.76 1.41z" />
+              </svg>
+              12 Weeks
+            </span>
+            <span class="meta-separator">•</span>
+            <span>Intermediate</span>
+          </div>
+          <h3 class="course-title">Classical Oil Glazing</h3>
+          <p class="course-description">Master oil values, paint layering, drying rates, and color temperature setups
+            alongside master curators.</p>
+          <div class="course-footer-divider"></div>
+          <div class="course-footer">
+            <div class="course-instructor">
+              <div class="instructor-avatar-wrapper">
+                <img src="images/faculty_1.png" alt="Alejandro V." class="instructor-avatar">
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="instructor-info">
+                <span class="instructor-label">Instructor</span>
+                <span class="instructor-name">Alejandro V.</span>
+              </div>
+            </div>
+            <div class="course-rating-wrapper">
+              <div class="course-rating">
+                <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-count">(48)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 2: Sketching -->
+      <div class="course-card reveal">
+        <div class="course-img-container">
+          <div class="course-img-wrapper">
+            <img src="images/course_sketch.png" alt="Charcoal sketch of human anatomy drawings">
+            <div class="course-img-overlay"></div>
+          </div>
+          <span class="course-tag">Drawing</span>
+          <div class="course-price-badge">
+            <span class="price-amount">$320</span>
+          </div>
+        </div>
+        <div class="course-content">
+          <div class="course-header-meta">
+            <span>
+              <svg class="meta-icon" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.85 2.22-.76 1.41z" />
+              </svg>
+              8 Weeks
+            </span>
+            <span class="meta-separator">•</span>
+            <span>Beginner</span>
+          </div>
+          <h3 class="course-title">Anatomical Charcoal Realism</h3>
+          <p class="course-description">Develop critical drawing accuracy, line weights, shadow maps, and gestural
+            sketching from studio models.</p>
+          <div class="course-footer-divider"></div>
+          <div class="course-footer">
+            <div class="course-instructor">
+              <div class="instructor-avatar-wrapper">
+                <img src="images/faculty_1.png" alt="Elena Rostova" class="instructor-avatar">
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="instructor-info">
+                <span class="instructor-label">Instructor</span>
+                <span class="instructor-name">Elena Rostova</span>
+              </div>
+            </div>
+            <div class="course-rating-wrapper">
+              <div class="course-rating">
+                <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                <span class="rating-count">(64)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 3: Digital Art -->
+      <div class="course-card reveal">
+        <div class="course-img-container">
+          <div class="course-img-wrapper">
+            <img src="images/course_digital.png" alt="Creative graphic designer using digital drawing tablet">
+            <div class="course-img-overlay"></div>
+          </div>
+          <span class="course-tag">Digital</span>
+          <div class="course-price-badge">
+            <span class="price-amount">$480</span>
+          </div>
+        </div>
+        <div class="course-content">
+          <div class="course-header-meta">
+            <span>
+              <svg class="meta-icon" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.85 2.22-.76 1.41z" />
+              </svg>
+              10 Weeks
+            </span>
+            <span class="meta-separator">•</span>
+            <span>Advanced</span>
+          </div>
+          <h3 class="course-title">Digital Illustration Concept</h3>
+          <p class="course-description">Explore workflows of cinematic art, digital lighting layers, values, and
+            environment styling on tablets.</p>
+          <div class="course-footer-divider"></div>
+          <div class="course-footer">
+            <div class="course-instructor">
+              <div class="instructor-avatar-wrapper">
+                <img src="images/faculty_2.png" alt="Marcus Vane" class="instructor-avatar">
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="instructor-info">
+                <span class="instructor-label">Instructor</span>
+                <span class="instructor-name">Marcus Vane</span>
+              </div>
+            </div>
+            <div class="course-rating-wrapper">
+              <div class="course-rating">
+                <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-count">(52)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 3.5rem;" class="reveal">
+      <a href="courses.html" class="btn btn-primary" id="viewAllCoursesBtn">View All Courses</a>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. CREATIVE LEARNING JOURNEY (Pedagogy)
+       ========================================== -->
+  <section class="pedagogy-sec">
+    <div class="section-header reveal">
+      <span class="subtitle">Our Method</span>
+      <h2>The Creative Pedagogy</h2>
+      <div class="art-divider"><span></span></div>
+    </div>
+
+    <div class="pedagogy-grid">
+      <!-- Step 1 -->
+      <div class="pedagogy-card reveal delay-1">
+        <div class="pedagogy-media-container">
+          <div class="pedagogy-img-wrapper">
+            <img src="images/course_sketch.png" alt="Student drawing anatomy sketch with charcoal">
+          </div>
+          <div class="pedagogy-img-backdrop"></div>
+        </div>
+        <div class="pedagogy-num">01</div>
+        <h3>Classical Mechanics</h3>
+        <div class="pedagogy-divider"></div>
+        <p>Every masterpiece starts with technical discipline. Students master optical perspective, values, anatomy, and
+          paint medium chemistry prior to conceptual execution.</p>
+      </div>
+      <!-- Step 2 -->
+      <div class="pedagogy-card reveal delay-2">
+        <div class="pedagogy-media-container">
+          <div class="pedagogy-img-wrapper">
+            <img src="images/course_watercolor.png" alt="Artists experimenting with colorful paints in studio">
+          </div>
+          <div class="pedagogy-img-backdrop"></div>
+        </div>
+        <div class="pedagogy-num">02</div>
+        <h3>Creative Exploration</h3>
+        <div class="pedagogy-divider"></div>
+        <p>Break the traditional rules with intent. Work with digital mediums, mixed clays, heavy textures, and abstract
+          forms to carve out your personal style.</p>
+      </div>
+      <!-- Step 3 -->
+      <div class="pedagogy-card reveal delay-3">
+        <div class="pedagogy-media-container">
+          <div class="pedagogy-img-wrapper">
+            <img src="images/gallery_hero_bg.jpg" alt="Art gallery exhibition hall filled with framed paintings">
+          </div>
+          <div class="pedagogy-img-backdrop"></div>
+        </div>
+        <div class="pedagogy-num">03</div>
+        <h3>Exhibition & Legacy</h3>
+        <div class="pedagogy-divider"></div>
+        <p>Build a curated professional portfolio, engage in direct group reviews, and exhibit your final artworks
+          inside our public virtual and physical gallery channels.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. PROFESSIONAL INSTRUCTORS (Faculty)
+       ========================================== -->
+  <section class="faculty-showcase">
+    <div class="section-header reveal">
+      <span class="subtitle">Master Mentors</span>
+      <h2>Instructors at Pencil Tip</h2>
+      <div class="art-divider"><span></span></div>
+    </div>
+
+    <div class="faculty-showcase-grid">
+      <!-- Member 1 -->
+      <div class="faculty-card reveal">
+        <div class="faculty-img-wrap">
+          <img src="images/faculty_1.png" alt="Alejandro V.">
+          <div class="faculty-decor-ring"></div>
+        </div>
+        <h3>Alejandro V.</h3>
+        <span class="role">Master Oil Painter</span>
+        <p>Specializes in 17th-century glazing setups, canvas preparation, and classical portraiture composition
+          methods.</p>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="faculty-card reveal">
+        <div class="faculty-img-wrap">
+          <img src="images/faculty_2.png" alt="Marcus Vane">
+          <div class="faculty-decor-ring"></div>
+        </div>
+        <h3>Marcus Vane</h3>
+        <span class="role">Lead Sculptor & Concept Artist</span>
+        <p>Guides anatomical clay sculpts, digital landscape layering, and cinematic rendering pipelines.</p>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="faculty-card reveal">
+        <div class="faculty-img-wrap">
+          <img src="images/faculty_1.png" alt="Elena Rostova">
+          <div class="faculty-decor-ring"></div>
+        </div>
+        <h3>Elena Rostova</h3>
+        <span class="role">Life Sketching Expert</span>
+        <p>Focuses on gestural drawing speed techniques, charcoal volume maps, and organic floral wet washes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. STUDENT MASTERPIECES (Masonry Spotlight)
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--bg-secondary);">
+    <div class="section-header reveal">
+      <span class="subtitle">Artistic Triumphs</span>
+      <h2>Featured Student Works</h2>
+      <div class="art-divider"><span></span></div>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <div class="gallery-img-wrapper">
+          <img src="images/gallery_abstract.png" alt="Ethereal Terracotta painting">
+        </div>
+        <div class="gallery-overlay">
+          <h3>Ethereal Terracotta</h3>
+          <p>Oil Canvas - Evelyn Parker, Alumna 2025</p>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <div class="gallery-img-wrapper">
+          <img src="images/gallery_portrait.png" alt="The Silent Wisdom charcoal drawing">
+        </div>
+        <div class="gallery-overlay">
+          <h3>The Silent Wisdom</h3>
+          <p>Charcoal - Liam Croft, Student</p>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <div class="gallery-img-wrapper">
+          <img src="images/course_watercolor.png" alt="Hues of Autumn watercolor">
+        </div>
+        <div class="gallery-overlay">
+          <h3>Hues of Autumn</h3>
+          <p>Watercolor - Chloe Sinclair, Alumna 2024</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. VIRTUAL GALLERY SHOWCASE (Exhibition Slides)
+       ========================================== -->
+  <section class="virtual-exhibition">
+    <div class="section-header reveal">
+      <span class="subtitle" style="color: var(--brand-mustard);">Digital Museum</span>
+      <h2 style="color: var(--white);">Virtual Exhibition Space</h2>
+      <div class="art-divider"><span></span></div>
+    </div>
+
+    <div class="gallery-wall reveal">
+      <!-- Prev & Next Arrows -->
+      <button class="exhibition-nav-btn prev" aria-label="Previous artwork">&#10094;</button>
+      <button class="exhibition-nav-btn next" aria-label="Next artwork">&#10095;</button>
+
+      <div class="exhibition-slider">
+        <!-- Slide 1 -->
+        <div class="exhibition-slide active">
+          <div class="slide-frame-wrap">
+            <div class="gallery-gilded-frame">
+              <img src="images/gallery_abstract.png" alt="Ethereal Terracotta painting">
+            </div>
+          </div>
+          <div class="slide-details">
+            <h3>Ethereal Terracotta</h3>
+            <div class="meta">Oil on Canvas - 120cm x 150cm</div>
+            <p>Winner of the 2025 Creative Visionary Award. This piece explores the deep textural values of terracotta
+              clays,
+              layering heavy linseed paint bodies on coarse canvas to reflect industrial rust and organic decay.</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="exhibition-slide">
+          <div class="slide-frame-wrap">
+            <div class="gallery-gilded-frame">
+              <img src="images/gallery_portrait.png" alt="The Silent Wisdom drawing">
+            </div>
+          </div>
+          <div class="slide-details">
+            <h3>The Silent Wisdom</h3>
+            <div class="meta">Charcoal on Fabriano Sheet</div>
+            <p>A stunning exploration of negative space and deep shadow values. Liam Croft masterfully wraps anatomical
+              features
+              in dense graphite fields, creating a highly cinematic atmosphere.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="exhibition-slide">
+          <div class="slide-frame-wrap">
+            <div class="gallery-gilded-frame">
+              <img src="images/course_watercolor.png" alt="Hues of Autumn watercolor">
+            </div>
+          </div>
+          <div class="slide-details">
+            <h3>Hues of Autumn</h3>
+            <div class="meta">Watercolor on Cold-Press Paper</div>
+            <p>Chloe Sinclair showcases fluid dynamics and granular control, harnessing botanical flow shapes in
+              terracotta
+              pigments and warm ochre washes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       9. UPCOMING WORKSHOPS & MASTERCLASSES
+       ========================================== -->
+  <section class="section-padding workshops-bg">
+    <div class="section-header reveal">
+      <span class="subtitle">Artistic Events</span>
+      <h2>Upcoming Masterclasses & Workshops</h2>
+      <div class="art-divider"><span></span></div>
+    </div>
+
+    <div class="workshops-list">
+      <!-- Event 1 -->
+      <div class="workshop-row reveal">
+        <div class="workshop-date">
+          <div class="date-day">28</div>
+          <div class="date-month">Jun</div>
+        </div>
+        <div class="workshop-details">
+          <span class="tag">Watercolor</span>
+          <h3>Floral Expressions & Wet-on-Wet Techniques</h3>
+          <p>Elena Rostova shares techniques to harness organic pigment granulation and floral structural washes.</p>
+        </div>
+        <div class="workshop-action">
+          <a href="contact.html?event=watercolor" class="btn btn-dark btn-sm">Reserve Seat</a>
+        </div>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="workshop-row reveal">
+        <div class="workshop-date">
+          <div class="date-day">12</div>
+          <div class="date-month">Jul</div>
+        </div>
+        <div class="workshop-details">
+          <span class="tag">Sculpture</span>
+          <h3>Dynamic Head & Portrait Modeling in Clay</h3>
+          <p>Marcus Vane guides structural carving, muscle lines, expression rendering, and hollow setups.</p>
+        </div>
+        <div class="workshop-action">
+          <a href="contact.html?event=clay" class="btn btn-dark btn-sm">Reserve Seat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       10. SUCCESS STORIES (Testimonials Carousel)
+       ========================================== -->
+  <section class="success-stories">
+    <div class="section-header reveal">
+      <span class="subtitle">Graduate Placements</span>
+      <h2>Alumni Success Stories</h2>
+      <div class="art-divider"><span></span></div>
+    </div>
+
+    <div class="success-slider reveal">
+      <div class="success-slide-container">
+        <!-- Story 1 -->
+        <div class="success-slide">
+          <div class="success-card-layout">
+            <div class="success-img">
+              <img src="images/faculty_2.png" alt="Sophia Mitchell">
+            </div>
+            <div class="success-content">
+              <div class="success-quote">
+                "Pencil Tip completely restructured my visual thinking. The critiques are honest, the studio community
+                is tightly-knit, and I secured gallery representation within months of graduating."
+              </div>
+              <div class="success-author">
+                <h4>Sophia Mitchell</h4>
+                <p>Alumna, Represented by NYC Fine Arts Guild</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="success-slide">
+          <div class="success-card-layout">
+            <div class="success-img">
+              <img src="images/faculty_1.png" alt="Evelyn Parker">
+            </div>
+            <div class="success-content">
+              <div class="success-quote">
+                "Developing my oil glazing portfolio under Alejandro's mentorship gave me the technical confidence to
+                open my own private instruction workshop studio block."
+              </div>
+              <div class="success-author">
+                <h4>Evelyn Parker</h4>
+                <p>Alumna, Owner of Parker Studio Group</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="success-carousel-controls">
+        <span class="success-carousel-dot active" data-slide="0"></span>
+        <span class="success-carousel-dot" data-slide="1"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       11. AWARDS & RECOGNITIONS
+       ========================================== -->
+  <section class="awards-sec">
+    <div class="section-header reveal">
+      <span class="subtitle">academy accolades</span>
+      <h2>Awards & Institutional Laurels</h2>
+      <div class="art-divider"><span></span></div>
+    </div>
+
+    <div class="awards-grid">
+      <!-- Award 1 -->
+      <div class="award-card reveal">
+        <div class="award-icon-wrap">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm0-4h-2V7h2v8z" />
+          </svg>
+        </div>
+        <h4>Top Arts Curriculum</h4>
+        <p>Ranked #1 for fine arts instructional mechanics by the International Fine Arts Council, 2025.</p>
+      </div>
+
+      <!-- Award 2 -->
+      <div class="award-card reveal">
+        <div class="award-icon-wrap">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm0-4h-2V7h2v8z" />
+          </svg>
+        </div>
+        <h4>Exhibition Placements</h4>
+        <p>94% of our advanced curriculum graduates exhibit works inside metropolitan galleries within a year.</p>
+      </div>
+
+      <!-- Award 3 -->
+      <div class="award-card reveal">
+        <div class="award-icon-wrap">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm0-4h-2V7h2v8z" />
+          </svg>
+        </div>
+        <h4>Distinguished Faculty</h4>
+        <p>Our educators are active studio professionals with global exhibition credentials and gallery tenure.</p>
+      </div>
+
+      <!-- Award 4 -->
+      <div class="award-card reveal">
+        <div class="award-icon-wrap">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm0-4h-2V7h2v8z" />
+          </svg>
+        </div>
+        <h4>Creative Innovation</h4>
+        <p>Recipient of the 2026 Artistic Development Grant for outstanding physical-digital learning spaces.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       12. CREATIVE STUDIO FACILITIES
+       ========================================== -->
+  <section class="facilities-sec">
+    <div class="section-header reveal">
+      <span class="subtitle">Creative Environments</span>
+      <h2>Our Studio Facilities</h2>
+      <div class="art-divider"><span></span></div>
+    </div>
+
+    <div class="facilities-grid">
+      <!-- Left image show panel -->
+      <div class="facility-showcase-panel reveal">
+        <img src="images/studio_interior.png" alt="Classical Easel Block Studio">
+        <div class="facility-overlay-desc">
+          <h3>Classical Easel Block</h3>
+          <p>A natural light-filled hall equipped with solid oak drawing tables, studio plaster models, spotlight
+            control systems, and adjustable canvas easels.</p>
+        </div>
+      </div>
+
+      <!-- Right list navigation tabs -->
+      <div class="facilities-list reveal">
+        <!-- Tab 1 -->
+        <div class="facility-tab-item active" data-image="images/studio_interior.png"
+          data-heading="Classical Easel Block"
+          data-desc="A natural light-filled hall equipped with solid oak drawing tables, studio plaster models, spotlight control systems, and adjustable canvas easels.">
+          <div>
+            <h4>Classical Easel Block</h4>
+            <p>North-light drawing zones</p>
+          </div>
+          <span class="facility-arrow">&#10095;</span>
+        </div>
+
+        <!-- Tab 2 -->
+        <div class="facility-tab-item" data-image="images/hero_workspace.png" data-heading="Pottery & Clay Stoneware"
+          data-desc="Fully outfitted clay studio supporting stoneware carving, wheel spinning, mineral glaze chemistry, and high-temperature electric/reduction kilns.">
+          <div>
+            <h4>Pottery & Clay Stoneware</h4>
+            <p>Red clay carving blocks & kilns</p>
+          </div>
+          <span class="facility-arrow">&#10095;</span>
+        </div>
+
+        <!-- Tab 3 -->
+        <div class="facility-tab-item" data-image="images/course_digital.png" data-heading="Concept Digital Lab"
+          data-desc="Modern workspaces holding Wacom Cintiq graphics displays, advanced painting software, and depth scanners for cinematic animation designers.">
+          <div>
+            <h4>Concept Digital Lab</h4>
+            <p>High-end tablets & concept styling</p>
+          </div>
+          <span class="facility-arrow">&#10095;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       13. LEARNING PROCESS ROADMAP (Timeline)
+       ========================================== -->
+  <section class="timeline-sec">
+    <div class="section-header reveal">
+      <span class="subtitle">Your Roadmap</span>
+      <h2>The Artist Timeline</h2>
+      <div class="art-divider"><span></span></div>
+    </div>
+
+    <div class="timeline-v-path">
+      <!-- Item 1 -->
+      <div class="timeline-v-item left reveal">
+        <div class="timeline-v-node"></div>
+        <div class="timeline-v-card">
+          <h4>Phase 1: Foundational Sketching</h4>
+          <p>Develop critical drawing accuracy, mapping negative space, volume grids, and anatomy lines with graphite
+            and charcoal bars.</p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="timeline-v-item right reveal">
+        <div class="timeline-v-node"></div>
+        <div class="timeline-v-card">
+          <h4>Phase 2: Color Chemistry & Viscosity</h4>
+          <p>Study color temperatures, light reflections, mineral pigments, paint glazes, and medium drying rates on
+            wood canvases.</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="timeline-v-item left reveal">
+        <div class="timeline-v-node"></div>
+        <div class="timeline-v-card">
+          <h4>Phase 3: Group Critiques & Mentorship</h4>
+          <p>Gain direct, structured feedback from exhibited artists. Refine layout compositions and thematic concepts
+            inside the classroom.</p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="timeline-v-item right reveal">
+        <div class="timeline-v-node"></div>
+        <div class="timeline-v-card">
+          <h4>Phase 4: Public Gallery Exhibition</h4>
+          <p>Curate your final portfolio collection, participate in public virtual museum previews, and coordinate
+            physical gallery open-nights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       14. ART ACADEMIC FAQs
+       ========================================== -->
+  <section class="section-padding">
+    <div class="section-header reveal">
+      <span class="subtitle">Enrollment Questions</span>
+      <h2>Frequently Asked Questions</h2>
+      <div class="art-divider"><span></span></div>
+    </div>
+
+    <div class="faq-accordion-container reveal" style="max-width: 900px; margin: 0 auto;">
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <button class="faq-header">
+          <span>Do I need a professional portfolio to enroll at Pencil Tip?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content">
+          <p>We welcome creators of all experience levels! For entry-level foundation classes, no previous portfolio is
+            required.
+            Advanced programs (such as Classical Oil Glazing or Cinematic Digital Concept Art) recommend submitting 5-8
+            examples
+            of your current drawing or painting work for appropriate placement evaluation.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <button class="faq-header">
+          <span>Can I access studio spaces outside of formal course times?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content">
+          <p>Absolutely! Premium enrollment includes 24/7 access to our easel block, drawing zones, and pottery studios,
+            enabling students to work at their own pace. Dedicated support staff remain on-site during daytime studio
+            shifts
+            to assist with materials management.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <button class="faq-header">
+          <span>Are materials and canvases included in course tuition?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content">
+          <p>Standard drawing paper, sketching charcoal, plaster models, and basic clay blocks are fully provided.
+            Canvases, specific oil paint lines, and personal digital drawing styluses are bought independently.
+            Our school shop offers high-grade supplies at student-discounted rates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       17. LUXURIOUS NEWSLETTER SUBSCRIPTION
+       ========================================== -->
+  <section class="newsletter-section">
+    <div class="newsletter-content reveal">
+      <h2>Join Pencil Tip Creative Network</h2>
+      <p>Subscribe to our monthly newsletter for faculty showcases, upcoming workshops, free drawing reference packs,
+        and course discount updates.</p>
+      <form class="newsletter-form" id="newsletterFormIndex">
+        <input type="email" placeholder="Enter your email address" aria-label="Email Address" class="newsletter-input"
+          required autocomplete="email">
+        <button type="submit" class="newsletter-btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-icon-wrap" style="margin-bottom: 1.25rem; justify-content: flex-start;">
+          <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+            style="width: 48px; height: 48px;">
+            <path
+              d="M20 70 C 10 50, 25 20, 60 20 C 85 20, 90 40, 80 60 C 70 80, 45 85, 30 80 C 15 75, 10 90, 20 90 C 35 90, 50 70, 75 70"
+              fill="none" stroke="var(--brand-primary)" stroke-width="6" stroke-linecap="round" opacity="0.95" />
+            <path d="M35 80 C 20 65, 35 35, 65 35 C 80 35, 80 50, 70 65" fill="none" stroke="var(--brand-secondary)"
+              stroke-width="4" stroke-linecap="round" opacity="0.75" />
+            <polygon points="70,30 80,40 50,70 40,60" fill="var(--bg-secondary)" stroke="var(--text-dark)"
+              stroke-width="2.5" stroke-linejoin="round" />
+            <polygon points="50,70 40,60 28,72" fill="#FAF6F0" stroke="var(--text-dark)" stroke-width="2.5"
+              stroke-linejoin="round" />
+            <polygon points="34,66 30,62 24,76" fill="var(--text-dark)" stroke="var(--text-dark)" stroke-width="1.5"
+              stroke-linejoin="round" />
+            <circle cx="85" cy="70" r="5" fill="var(--brand-primary)" />
+            <circle cx="75" cy="85" r="4" fill="var(--brand-secondary)" />
+            <circle cx="92" cy="45" r="3.5" fill="var(--accent)" />
+          </svg>
+        </div>
+        <h2
+          style="font-size: 1.8rem; color: var(--white); margin-bottom: 1rem; font-family: var(--font-serif-cormorant); letter-spacing: 2px;">
+          PENCIL TIP</h2>
+        <p>A premier global fine art academy inspiring creative vision and technical masterpiece in classical and modern
+          disciplines.</p>
+        <div class="footer-social-links">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Pinterest">PI</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+
+      <div class="footer-navigation">
+        <h4 class="footer-heading">Academy</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="courses.html">Our Courses</a></li>
+          <li><a href="gallery.html">Exhibitions</a></li>
+          <li><a href="about.html#instructors">Faculty Members</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-support">
+        <h4 class="footer-heading">Support</h4>
+        <ul class="footer-links">
+          <li><a href="about.html#faqs">Common FAQs</a></li>
+          <li><a href="contact.html">Physical Visits</a></li>
+          <li><a href="contact.html#enroll">Enrollment Info</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4 class="footer-heading">Find Us</h4>
+        <div class="footer-contact-info">
+          <p><span>Addr:</span> 48 Terracotta Blvd, Studio Block C, Art District, NY 10003</p>
+          <p><span>Phone:</span> +1 (212) 555-0814</p>
+          <p><span>Email:</span> contact@penciltip.edu</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pencil Tip Academy of Art. All Rights Reserved.</p>
+      <p>Designed with Artistic Care.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+    </svg>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+l
+
+</html>

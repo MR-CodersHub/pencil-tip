@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore original fine art paintings, charcoal portraits, watercolor masterpieces, ceramic sculptures, and digital illustrations crafted by students and faculty of Pencil Tip Academy of Art.">
+  <title>The Exhibition Hall | Pencil Tip Academy of Art Gallery</title>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Gallery Stylesheet -->
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER / NAVIGATION
+       ========================================== -->
+  <header class="inner-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="headerLogo">
+        <div class="logo-icon-wrap">
+          <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 70 C 10 50, 25 20, 60 20 C 85 20, 90 40, 80 60 C 70 80, 45 85, 30 80 C 15 75, 10 90, 20 90 C 35 90, 50 70, 75 70" fill="none" stroke="var(--brand-primary)" stroke-width="6" stroke-linecap="round" opacity="0.95"/>
+            <path d="M35 80 C 20 65, 35 35, 65 35 C 80 35, 80 50, 70 65" fill="none" stroke="var(--brand-secondary)" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+            <polygon points="70,30 80,40 50,70 40,60" fill="var(--bg-secondary)" stroke="var(--text-dark)" stroke-width="2.5" stroke-linejoin="round"/>
+            <polygon points="50,70 40,60 28,72" fill="#FAF6F0" stroke="var(--text-dark)" stroke-width="2.5" stroke-linejoin="round"/>
+            <polygon points="34,66 30,62 24,76" fill="var(--text-dark)" stroke="var(--text-dark)" stroke-width="1.5" stroke-linejoin="round"/>
+            <circle cx="85" cy="70" r="5" fill="var(--brand-primary)"/>
+            <circle cx="75" cy="85" r="4" fill="var(--brand-secondary)"/>
+            <circle cx="92" cy="45" r="3.5" fill="var(--accent)"/>
+          </svg>
+        </div>
+        <div class="logo-text">Pencil Tip<span>Academy of Art</span></div>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="courses.html" class="nav-link">Courses</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <!-- User Account -->
+      <div class="user-account" id="userAccount">
+        <button class="user-profile-btn" id="userProfileBtn" aria-label="Open user account menu" aria-expanded="false" aria-haspopup="true">
+          <svg class="user-avatar" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="22" fill="#F5EBE1"/>
+            <circle cx="22" cy="17" r="7" fill="#D45D3B" opacity="0.85"/>
+            <ellipse cx="22" cy="34" rx="11" ry="7" fill="#D45D3B" opacity="0.7"/>
+          </svg>
+        </button>
+        <div class="user-dropdown" id="userDropdown" role="menu" aria-label="User account menu">
+          <ul class="user-dropdown-links">
+            <li role="none"><a href="login.html" role="menuitem" class="user-dropdown-link login-btn">Login</a></li>
+            <li role="none"><a href="signup.html" role="menuitem" class="user-dropdown-link signup-btn">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hamburger" id="hamburgerMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- Mobile Navigation Drawer -->
+      <div class="mob-nav-dropdown" id="mobNavDropdown">
+        <button class="mob-close-btn" id="mobCloseBtn" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <ul class="mob-dropdown-links">
+          <li><a href="index.html" class="mob-dropdown-link nav-link">Home</a></li>
+          <li><a href="about.html" class="mob-dropdown-link nav-link">About</a></li>
+          <li><a href="courses.html" class="mob-dropdown-link nav-link">Courses</a></li>
+          <li><a href="gallery.html" class="mob-dropdown-link nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="mob-dropdown-link nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- Mobile Nav Overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ==========================================
+       INNER PAGE HERO — GALLERY
+       ========================================== -->
+  <section class="inner-hero gallery-hero" id="galleryHero">
+    <!-- Decorative corner geometric SVG art -->
+    <svg class="inner-hero-art top-left" width="200" height="180" viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="10" y="10" width="80" height="60" rx="3" stroke="#E9C46A" stroke-width="1.5" stroke-dasharray="6 4"/>
+      <rect x="110" y="10" width="80" height="60" rx="3" stroke="#FAF6F0" stroke-width="1" stroke-dasharray="6 4" opacity="0.6"/>
+      <rect x="10" y="90" width="80" height="80" rx="3" stroke="#D45D3B" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.7"/>
+      <rect x="110" y="90" width="80" height="80" rx="3" stroke="#E07A5F" stroke-width="1" stroke-dasharray="5 4" opacity="0.5"/>
+      <line x1="10" y1="80" x2="190" y2="80" stroke="#FAF6F0" stroke-width="0.7" opacity="0.3"/>
+    </svg>
+    <svg class="inner-hero-art bottom-right" width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="70" cy="70" r="60" stroke="#E9C46A" stroke-width="1.2" stroke-dasharray="8 5"/>
+      <circle cx="70" cy="70" r="40" stroke="#D45D3B" stroke-width="0.9" opacity="0.5"/>
+      <circle cx="70" cy="70" r="18" stroke="#FAF6F0" stroke-width="0.8" opacity="0.4"/>
+      <line x1="10" y1="70" x2="130" y2="70" stroke="#FAF6F0" stroke-width="0.6" opacity="0.35"/>
+    </svg>
+    <!-- Main text content -->
+    <div class="inner-hero-content">
+      <span class="inner-hero-tag">Student &amp; Faculty Art</span>
+      <h1>The <span>Exhibition Hall</span></h1>
+      <span class="inner-hero-divider"></span>
+      <p>A curated space displaying graduation portfolios, masterclass creations, and professional faculty works across physical and digital mediums.</p>
+    </div>
+    <!-- Curved wave transition -->
+    <div class="inner-hero-wave">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z" fill="#FAF6F0"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       GALLERY SECTION — MASONRY + FILTER
+       ========================================== -->
+  <section class="gal-section" id="gallerySection">
+
+    <!-- ── Filter Pills ── -->
+    <div class="gal-filters reveal" id="galFilters">
+      <div class="gal-filter-track">
+        <button class="gal-pill active" data-filter="all" id="pill-all">
+          <span class="pill-dot"></span>All Artworks
+        </button>
+        <button class="gal-pill" data-filter="oil-acrylic" id="pill-oil">
+          <span class="pill-dot"></span>Oil &amp; Acrylic
+        </button>
+        <button class="gal-pill" data-filter="sketch-ink" id="pill-sketch">
+          <span class="pill-dot"></span>Sketch &amp; Ink
+        </button>
+        <button class="gal-pill" data-filter="watercolor" id="pill-watercolor">
+          <span class="pill-dot"></span>Watercolor
+        </button>
+        <button class="gal-pill" data-filter="sculpture" id="pill-sculpture">
+          <span class="pill-dot"></span>Sculpture &amp; Clay
+        </button>
+        <button class="gal-pill" data-filter="digital" id="pill-digital">
+          <span class="pill-dot"></span>Digital Art
+        </button>
+        <button class="gal-pill" data-filter="studio" id="pill-studio">
+          <span class="pill-dot"></span>Studio &amp; Life
+        </button>
+      </div>
+      <!-- Count badge -->
+      <div class="gal-count" id="galCount"><span id="galCountNum">20</span> works</div>
+    </div>
+
+    <!-- ── Masonry Grid ── -->
+    <div class="gal-grid" id="galGrid">
+
+      <!-- 01 — Featured Hero: Abstract Oil (WIDE) -->
+      <div class="gal-item gal-wide reveal" data-category="oil-acrylic"
+           data-title="Ethereal Terracotta" data-dimensions="120cm x 150cm" data-extra="Exhibited at the 2025 Summer Alumna Showcase." data-description="A bold abstract oil painting exploring the rich texture and warm tones of terracotta clay." data-medium="Oil on Canvas"
+           data-artist="Evelyn Parker" data-year="2025" data-index="0">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/gallery_abstract.png" alt="Luxury abstract terracotta oil painting — warm layered textures" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Oil on Canvas</span>
+              <h3>Ethereal Terracotta</h3>
+              <p class="gal-artist">Evelyn Parker &mdash; Alumna 2025</p>
+              <button class="gal-view-btn" aria-label="View Ethereal Terracotta artwork">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 02 — Portrait: Charcoal Sketch -->
+      <div class="gal-item gal-tall reveal" data-category="sketch-ink"
+           data-title="The Silent Wisdom" data-dimensions="50cm x 70cm" data-extra="Awarded the annual charcoal student prize." data-description="A delicate charcoal portrait study showcasing subtle shadow play and high-contrast atmospheric depth." data-medium="Charcoal on Paper"
+           data-artist="Liam Croft" data-year="2024" data-index="1">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/gallery_portrait.png" alt="Detailed charcoal sketch portrait with dramatic shadow" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Charcoal on Paper</span>
+              <h3>The Silent Wisdom</h3>
+              <p class="gal-artist">Liam Croft &mdash; Student 2024</p>
+              <button class="gal-view-btn" aria-label="View The Silent Wisdom artwork">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 03 — Square: Watercolor Wash -->
+      <div class="gal-item reveal" data-category="watercolor"
+           data-title="Hues of Autumn" data-dimensions="40cm x 55cm" data-extra="Special display in the watercolor workshop corridor." data-description="Warm crimson and gold watercolor washes capturing the transitional colors of autumn leaves." data-medium="Watercolor"
+           data-artist="Chloe Sinclair" data-year="2025" data-index="2">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/course_watercolor.png" alt="Red ochre watercolor washes on cold-press paper" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Watercolor</span>
+              <h3>Hues of Autumn</h3>
+              <p class="gal-artist">Chloe Sinclair &mdash; Graduate</p>
+              <button class="gal-view-btn" aria-label="View Hues of Autumn artwork">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 04 — Standard: Clay Sculpture -->
+      <div class="gal-item reveal" data-category="sculpture"
+           data-title="Stoneware Silhouette" data-dimensions="30cm x 30cm x 65cm" data-extra="Hand-fired at 1200 degrees in our main gas kiln." data-description="A hand-built clay ceramic figure with textured glazes reflecting earthy raw stone." data-medium="Clay Stoneware"
+           data-artist="Marcus Vane" data-year="2024" data-index="3">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/course_sculpture.png" alt="Ceramic clay stoneware figure — detailed surface texture" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Clay Stoneware</span>
+              <h3>Stoneware Silhouette</h3>
+              <p class="gal-artist">Marcus Vane &mdash; Faculty</p>
+              <button class="gal-view-btn" aria-label="View Stoneware Silhouette artwork">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 05 — Wide: Digital Concept Art -->
+      <div class="gal-item gal-wide reveal" data-category="digital"
+           data-title="Neo-Tokyo Dreamscape" data-dimensions="3840px x 2160px" data-extra="Featured in the digital arts conceptual exhibition." data-description="A vibrant futuristic digital illustration featuring neon-soaked urban pathways and reflections." data-medium="Digital Illustration"
+           data-artist="Sophia Mitchell" data-year="2025" data-index="4">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/course_digital.png" alt="Neo-Tokyo futuristic digital concept illustration" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Digital Illustration</span>
+              <h3>Neo-Tokyo Dreamscape</h3>
+              <p class="gal-artist">Sophia Mitchell &mdash; Student</p>
+              <button class="gal-view-btn" aria-label="View Neo-Tokyo Dreamscape artwork">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 06 — Standard: Acrylic Texture -->
+      <div class="gal-item reveal" data-category="oil-acrylic"
+           data-title="Crimson Glaze Study" data-dimensions="80cm x 80cm" data-extra="Created during the texture and impasto study masterclass." data-description="Thick acrylic palette-knife texture relief on board with crimson and gold glaze layers." data-medium="Acrylic Texture Relief"
+           data-artist="Alejandro Vidal" data-year="2023" data-index="5">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/hero_art.png" alt="Thick acrylic texture relief with crimson and gold tones" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Acrylic on Board</span>
+              <h3>Crimson Glaze Study</h3>
+              <p class="gal-artist">Alejandro Vidal &mdash; Faculty</p>
+              <button class="gal-view-btn" aria-label="View Crimson Glaze Study artwork">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 07 — Tall: Studio Interior Oil Painting -->
+      <div class="gal-item gal-tall reveal" data-category="oil-acrylic"
+           data-title="Sunlit Easel Studies" data-dimensions="90cm x 60cm" data-extra="Painted live during the master class live session series." data-description="Classical oil sketch capturing morning sunlight pouring across classroom easels and artwork portfolios." data-medium="Oil on Canvas"
+           data-artist="Alejandro Vidal" data-year="2024" data-index="6">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/studio_interior.png" alt="Oil painting of a sunlit art studio with easels and canvases" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Oil on Canvas</span>
+              <h3>Sunlit Easel Studies</h3>
+              <p class="gal-artist">Alejandro Vidal &mdash; Faculty</p>
+              <button class="gal-view-btn" aria-label="View Sunlit Easel Studies artwork">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 08 — Standard: Graphite Sketch -->
+      <div class="gal-item reveal" data-category="sketch-ink"
+           data-title="Composition &amp; Shadows" data-medium="Graphite on Paper"
+           data-artist="Elena Rostova" data-year="2024" data-index="7">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/course_sketch.png" alt="Graphite sketch composition study with dramatic light and shadow" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Graphite on Paper</span>
+              <h3>Composition &amp; Shadows</h3>
+              <p class="gal-artist">Elena Rostova &mdash; Faculty</p>
+              <button class="gal-view-btn" aria-label="View Composition and Shadows artwork">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 09 — Standard: Ceramic Wheel Work -->
+      <div class="gal-item reveal" data-category="sculpture"
+           data-title="Centering Focus" data-dimensions="35cm x 35cm x 40cm" data-extra="A documentary photography capture of traditional pottery throwing." data-description="Studio study of hands forming ceramic clay stoneware on a running pottery wheel." data-medium="Glazed Ceramic"
+           data-artist="Sophia Mitchell" data-year="2024" data-index="8">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/faculty_2.png" alt="Hands forming ceramic clay on pottery wheel" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Glazed Ceramic</span>
+              <h3>Centering Focus</h3>
+              <p class="gal-artist">Sophia Mitchell &mdash; Graduate</p>
+              <button class="gal-view-btn" aria-label="View Centering Focus artwork">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 10 — Wide: Live Workshop Session -->
+      <div class="gal-item gal-wide reveal" data-category="studio"
+           data-title="The Morning Atelier" data-dimensions="Photography Print" data-extra="A visual record of senior students working in classical north light." data-description="Documentary photography capturing students painting in the classical north light of Pencil Tip studios." data-medium="Studio Photography"
+           data-artist="Pencil Tip Studio" data-year="2025" data-index="9">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/students_studio.png" alt="Students painting in the morning light of Pencil Tip studio" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Studio Photography</span>
+              <h3>The Morning Atelier</h3>
+              <p class="gal-artist">Pencil Tip Studio &mdash; 2025</p>
+              <button class="gal-view-btn" aria-label="View The Morning Atelier artwork">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 11 — Standard: Oil Portrait Faculty -->
+      <div class="gal-item reveal" data-category="oil-acrylic"
+           data-title="Portrait in Ochre" data-dimensions="70cm x 90cm" data-extra="Demonstration piece painted by Nadia Petrov during faculty showcase." data-description="A rich, textured oil portrait study exploring warm sienna hues and classical brushwork." data-medium="Oil Portrait"
+           data-artist="Nadia Petrov" data-year="2023" data-index="10">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/course_oil.png" alt="Richly rendered oil portrait with warm ochre and sienna tones" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Oil Portrait</span>
+              <h3>Portrait in Ochre</h3>
+              <p class="gal-artist">Nadia Petrov &mdash; Faculty</p>
+              <button class="gal-view-btn" aria-label="View Portrait in Ochre artwork">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 12 — Tall: Hero Workspace -->
+      <div class="gal-item gal-tall reveal" data-category="studio"
+           data-title="The Creative Mind" data-dimensions="Photography Print" data-extra="Capturing the organic clutter and tools of a professional painter." data-description="A detailed studio portrait showing brushes, paints, and raw canvas setups in natural light." data-medium="Studio Life"
+           data-artist="Pencil Tip Studio" data-year="2025" data-index="11">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/hero_workspace.png" alt="Artist workspace filled with brushes, palettes, and canvases" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Studio Life</span>
+              <h3>The Creative Mind</h3>
+              <p class="gal-artist">Pencil Tip Studio &mdash; 2025</p>
+              <button class="gal-view-btn" aria-label="View The Creative Mind artwork">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 13 — Standard: Faculty Portrait -->
+      <div class="gal-item reveal" data-category="studio"
+           data-title="The Master Instructor" data-dimensions="Photography Print" data-extra="Spotlighting our classical drawing faculty during critique sessions." data-description="Faculty portrait captures in natural light, celebrating classical fine art guidance." data-medium="Portrait Photography"
+           data-artist="Marcus Vane" data-year="2024" data-index="12">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/faculty_1.png" alt="Faculty instructor portrait in studio setting" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Portrait Photography</span>
+              <h3>The Master Instructor</h3>
+              <p class="gal-artist">Marcus Vane &mdash; Faculty</p>
+              <button class="gal-view-btn" aria-label="View The Master Instructor artwork">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 14 — Wide: Journey 2026 Exhibition -->
+      <div class="gal-item gal-wide reveal" data-category="studio"
+           data-title="The 2026 Graduation Show" data-dimensions="Exhibition View" data-extra="Archival record of the central graduation gallery setup." data-description="Exhibition showcase from the annual senior graduation gallery display." data-medium="Exhibition Photography"
+           data-artist="Pencil Tip Academy" data-year="2026" data-index="13">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/journey_2026.png" alt="Pencil Tip 2026 graduation show — gallery of student artworks" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Exhibition</span>
+              <h3>The 2026 Graduation Show</h3>
+              <p class="gal-artist">Pencil Tip Academy &mdash; 2026</p>
+              <button class="gal-view-btn" aria-label="View The 2026 Graduation Show">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 15 — Standard: Journey 2024 -->
+      <div class="gal-item reveal" data-category="studio"
+           data-title="Masterclass Sessions 2024" data-dimensions="Exhibition View" data-extra="From the behind-the-scenes documentary series of student workspaces." data-description="Behind-the-scenes captures of classical drawing masterclass workshops." data-medium="Workshop Photography"
+           data-artist="Pencil Tip Academy" data-year="2024" data-index="14">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/journey_2024.png" alt="Live masterclass workshop session at Pencil Tip Academy" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Workshop</span>
+              <h3>Masterclass Sessions 2024</h3>
+              <p class="gal-artist">Pencil Tip Academy &mdash; 2024</p>
+              <button class="gal-view-btn" aria-label="View Masterclass Sessions 2024">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 16 — Standard: Journey 2023 Annual -->
+      <div class="gal-item reveal" data-category="studio"
+           data-title="Annual Exhibition 2023" data-dimensions="Exhibition View" data-extra="A public showcase featuring over 150 individual student submissions." data-description="A curated documentary photograph from the annual Pencil Tip public show." data-medium="Exhibition Photography"
+           data-artist="Pencil Tip Academy" data-year="2023" data-index="15">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/journey_2023.png" alt="Annual art exhibition 2023 at Pencil Tip Academy" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Exhibition</span>
+              <h3>Annual Exhibition 2023</h3>
+              <p class="gal-artist">Pencil Tip Academy &mdash; 2023</p>
+              <button class="gal-view-btn" aria-label="View Annual Exhibition 2023">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 17 — Tall: Journey 2022 Scholarship -->
+      <div class="gal-item gal-tall reveal" data-category="studio"
+           data-title="Scholarship Showcase 2022" data-dimensions="Exhibition View" data-extra="Dedicated display celebrating talent from regional scholarship entries." data-description="Spotlighting award-winning portfolio entries from scholarship students." data-medium="Exhibition Photography"
+           data-artist="Pencil Tip Academy" data-year="2022" data-index="16">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/journey_2022.png" alt="Scholarship programme showcase exhibition 2022" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Scholarship</span>
+              <h3>Scholarship Showcase 2022</h3>
+              <p class="gal-artist">Pencil Tip Academy &mdash; 2022</p>
+              <button class="gal-view-btn" aria-label="View Scholarship Showcase 2022">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 18 — Wide: Journey 2021 Digital -->
+      <div class="gal-item gal-wide reveal" data-category="digital"
+           data-title="Digital Arts Expansion" data-dimensions="Digital Capture" data-extra="Commemorating the launch of our digital concept styling syllabus." data-description="Exhibition showcase highlighting the integration of digital conceptual painting tools." data-medium="Digital Exhibition"
+           data-artist="Pencil Tip Academy" data-year="2021" data-index="17">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/journey_2021.png" alt="Digital arts expansion programme 2021 — student digital artworks" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Digital Exhibition</span>
+              <h3>Digital Arts Expansion</h3>
+              <p class="gal-artist">Pencil Tip Academy &mdash; 2021</p>
+              <button class="gal-view-btn" aria-label="View Digital Arts Expansion">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 19 — Standard: Journey 2020 Founding -->
+      <div class="gal-item reveal" data-category="studio"
+           data-title="Founding Exhibition 2020" data-dimensions="Archive Print" data-extra="Historical photograph from our inaugural academy opening show." data-description="Archival photography showing the inaugural gallery opening of Pencil Tip Academy." data-medium="Archive Photography"
+           data-artist="Pencil Tip Academy" data-year="2020" data-index="18">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/journey_2020.png" alt="Founding exhibition of Pencil Tip Academy 2020" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Archive</span>
+              <h3>Founding Exhibition 2020</h3>
+              <p class="gal-artist">Pencil Tip Academy &mdash; 2020</p>
+              <button class="gal-view-btn" aria-label="View Founding Exhibition 2020">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+      <!-- 20 — Standard: About Hero -->
+      <div class="gal-item reveal" data-category="studio"
+           data-title="The Academy Story" data-dimensions="Archive Print" data-extra="A collection of visual assets reflecting our foundation history." data-description="Documentary visual story exploring student portfolios and studio workspaces." data-medium="Documentary Photography"
+           data-artist="Pencil Tip Academy" data-year="2025" data-index="19">
+        <div class="gal-frame">
+          <div class="gal-img-wrap">
+            <img src="images/about_hero_bg.jpg" alt="Pencil Tip Academy — students in active art sessions" loading="lazy">
+          </div>
+          <div class="gal-hover-overlay">
+            <div class="gal-overlay-inner">
+              <span class="gal-cat-tag">Documentary</span>
+              <h3>The Academy Story</h3>
+              <p class="gal-artist">Pencil Tip Academy &mdash; 2025</p>
+              <button class="gal-view-btn" aria-label="View The Academy Story">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                View Artwork
+              </button>
+            </div>
+          </div>
+          <div class="gal-frame-corner tl"></div>
+          <div class="gal-frame-corner tr"></div>
+          <div class="gal-frame-corner bl"></div>
+          <div class="gal-frame-corner br"></div>
+        </div>
+      </div>
+
+    </div><!-- /.gal-grid -->
+
+    <!-- Empty state message -->
+    <div class="gal-empty" id="galEmpty" style="display:none;">
+      <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--brand-primary)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      <p>No artworks found in this category.</p>
+    </div>
+
+  </section><!-- /.gal-section -->
+
+  <!-- ==========================================
+       PREMIUM LIGHTBOX
+       ========================================== -->
+  <div class="gal-lightbox" id="galLightbox" role="dialog" aria-modal="true" aria-label="Artwork lightbox viewer">
+    <div class="gal-lb-backdrop" id="galLbBackdrop"></div>
+    <!-- Close / Back Arrow Button -->
+    <button class="gal-lb-back-btn" id="galLbClose" aria-label="Back to Gallery">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    </button>
+    <div class="gal-lb-container">
+      <!-- Image -->
+      <div class="gal-lb-img-wrap">
+        <img src="" alt="" id="galLbImg" class="gal-lb-img">
+      </div>
+      <!-- Caption -->
+      <div class="gal-lb-caption">
+        <h3 id="galLbTitle"></h3>
+        <p class="gal-lb-artist" id="galLbArtist"></p>
+        
+        <!-- Structured Metadata Grid -->
+        <div class="gal-lb-grid">
+          <div class="gal-grid-item">
+            <span class="gal-grid-label">Category</span>
+            <span class="gal-grid-val" id="galLbCat"></span>
+          </div>
+          <div class="gal-grid-item">
+            <span class="gal-grid-label">Medium</span>
+            <span class="gal-grid-val" id="galLbMedium"></span>
+          </div>
+          <div class="gal-grid-item">
+            <span class="gal-grid-label">Dimensions</span>
+            <span class="gal-grid-val" id="galLbDims"></span>
+          </div>
+          <div class="gal-grid-item">
+            <span class="gal-grid-label">Year</span>
+            <span class="gal-grid-val" id="galLbYear"></span>
+          </div>
+        </div>
+
+        <p class="gal-lb-desc" id="galLbDesc"></p>
+        <p class="gal-lb-extra" id="galLbExtra"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-icon-wrap" style="margin-bottom: 1.25rem; justify-content: flex-start;">
+          <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 48px; height: 48px;">
+            <path d="M20 70 C 10 50, 25 20, 60 20 C 85 20, 90 40, 80 60 C 70 80, 45 85, 30 80 C 15 75, 10 90, 20 90 C 35 90, 50 70, 75 70" fill="none" stroke="var(--brand-primary)" stroke-width="6" stroke-linecap="round" opacity="0.95"/>
+            <path d="M35 80 C 20 65, 35 35, 65 35 C 80 35, 80 50, 70 65" fill="none" stroke="var(--brand-secondary)" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+            <polygon points="70,30 80,40 50,70 40,60" fill="var(--bg-secondary)" stroke="var(--text-dark)" stroke-width="2.5" stroke-linejoin="round"/>
+            <polygon points="50,70 40,60 28,72" fill="#FAF6F0" stroke="var(--text-dark)" stroke-width="2.5" stroke-linejoin="round"/>
+            <polygon points="34,66 30,62 24,76" fill="var(--text-dark)" stroke="var(--text-dark)" stroke-width="1.5" stroke-linejoin="round"/>
+            <circle cx="85" cy="70" r="5" fill="var(--brand-primary)"/>
+            <circle cx="75" cy="85" r="4" fill="var(--brand-secondary)"/>
+            <circle cx="92" cy="45" r="3.5" fill="var(--accent)"/>
+          </svg>
+        </div>
+        <h2 style="font-size: 1.8rem; color: var(--white); margin-bottom: 1rem; font-family: var(--font-serif-cormorant); letter-spacing: 2px;">PENCIL TIP</h2>
+        <p>A premier global fine art academy inspiring creative vision and technical masterpiece in classical and modern disciplines.</p>
+        <div class="footer-social-links">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Pinterest">PI</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div class="footer-navigation">
+        <h4 class="footer-heading">Academy</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="courses.html">Our Courses</a></li>
+          <li><a href="gallery.html">Exhibitions</a></li>
+          <li><a href="about.html#instructors">Faculty Members</a></li>
+        </ul>
+      </div>
+      <div class="footer-support">
+        <h4 class="footer-heading">Support</h4>
+        <ul class="footer-links">
+          <li><a href="about.html#faqs">Common FAQs</a></li>
+          <li><a href="contact.html">Physical Visits</a></li>
+          <li><a href="contact.html#enroll">Enrollment Info</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4 class="footer-heading">Find Us</h4>
+        <div class="footer-contact-info">
+          <p><span>Addr:</span> 48 Terracotta Blvd, Studio Block C, Art District, NY 10003</p>
+          <p><span>Phone:</span> +1 (212) 555-0814</p>
+          <p><span>Email:</span> contact@penciltip.edu</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pencil Tip Academy of Art. All Rights Reserved.</p>
+      <p>Designed with Artistic Care.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+    </svg>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>

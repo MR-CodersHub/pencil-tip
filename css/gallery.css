@@ -1,0 +1,767 @@
+/* ==========================================================================
+   THE EXHIBITION HALL — PREMIUM GALLERY CSS
+   ========================================================================== */
+
+/* ── Section Shell ─────────────────────────────────────────────────────── */
+.gal-section {
+  padding: var(--spacing-lg) 5% var(--spacing-xl);
+  background-color: var(--bg-primary); /* Warm Cream */
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* ── Category Filter Pills ────────────────────────────────────────────── */
+.gal-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto 3.5rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(212, 93, 59, 0.1);
+  padding-bottom: 1.5rem;
+}
+
+.gal-filter-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.6rem;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  padding-bottom: 4px; /* offset for active transform lift */
+}
+
+.gal-filter-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Webkit */
+}
+
+.gal-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.6rem 1.25rem;
+  font-family: var(--font-sans-montserrat);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  background: var(--white);
+  border: 1px solid rgba(212, 93, 59, 0.12);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+  flex-shrink: 0 !important; /* Prevent shrinking on mobile scroll tracks */
+}
+
+/* Floating dot inside pill */
+.pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brand-primary);
+  opacity: 0.3;
+  transform: scale(0.6);
+  transition: all 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.gal-pill:hover {
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(212, 93, 59, 0.08);
+}
+
+.gal-pill.active {
+  background: var(--brand-primary); /* Terracotta */
+  color: var(--white);
+  border-color: var(--brand-primary);
+  box-shadow: 0 8px 24px rgba(212, 93, 59, 0.25);
+  transform: translateY(-2px);
+}
+
+.gal-pill.active .pill-dot {
+  background: var(--white);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.gal-count {
+  font-family: var(--font-sans-montserrat);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 1px;
+}
+
+.gal-count span {
+  font-weight: 700;
+  color: var(--brand-primary);
+}
+
+/* ── Masonry Pinterest Layout ─────────────────────────────────────────── */
+.gal-grid {
+  columns: 3 360px;
+  column-gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  transition: opacity 0.4s ease;
+}
+
+/* Individual Grid Card */
+.gal-item {
+  break-inside: avoid;
+  margin-bottom: 2.5rem;
+  position: relative;
+  transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1),
+              opacity 0.4s ease;
+  will-change: transform, opacity;
+}
+
+/* Dynamic grid scale categories */
+.gal-tall {
+  /* Let columns control width, height is defined naturally by tall visual */
+}
+
+/* Frame surrounding the artwork (Mat-board effect) */
+.gal-frame {
+  background: var(--white);
+  border: 1px solid rgba(212, 93, 59, 0.1);
+  padding: 1.25rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.gal-img-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  aspect-ratio: auto;
+}
+
+.gal-img-wrap img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.96) contrast(0.98) brightness(0.98);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.3, 1),
+              filter 0.5s ease;
+}
+
+/* ── Frame Corner Accents (Draw themselves on hover) ───────────────────── */
+.gal-frame-corner {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 0;
+  z-index: 5;
+}
+
+.gal-frame-corner.tl { top: 1.25rem; left: 1.25rem; border-top-color: var(--brand-secondary); border-left-color: var(--brand-secondary); transform: translate(-3px, -3px); }
+.gal-frame-corner.tr { top: 1.25rem; right: 1.25rem; border-top-color: var(--brand-secondary); border-right-color: var(--brand-secondary); transform: translate(3px, -3px); }
+.gal-frame-corner.bl { bottom: 1.25rem; left: 1.25rem; border-bottom-color: var(--brand-secondary); border-left-color: var(--brand-secondary); transform: translate(-3px, 3px); }
+.gal-frame-corner.br { bottom: 1.25rem; right: 1.25rem; border-bottom-color: var(--brand-secondary); border-right-color: var(--brand-secondary); transform: translate(3px, 3px); }
+
+/* Hover states */
+.gal-item:hover .gal-frame {
+  transform: translateY(-8px);
+  border-color: rgba(212, 93, 59, 0.35);
+  box-shadow: 0 24px 48px rgba(30, 27, 24, 0.12),
+              0 4px 12px rgba(212, 93, 59, 0.05);
+}
+
+.gal-item:hover .gal-img-wrap img {
+  transform: scale(1.06);
+  filter: saturate(1.04) contrast(1.01) brightness(1.01);
+}
+
+.gal-item:hover .gal-frame-corner {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* ── Hover Overlay (Slide/Fade Placard) ────────────────────────────────── */
+.gal-hover-overlay {
+  position: absolute;
+  inset: 1.25rem;
+  background: rgba(30, 27, 24, 0.72); /* Warm translucent dark overlay */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 4;
+  border-radius: 6px;
+}
+
+.gal-overlay-inner {
+  text-align: center;
+  padding: 2rem;
+  color: var(--white);
+  transform: translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 100%;
+}
+
+.gal-cat-tag {
+  font-family: var(--font-sans-montserrat);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--brand-mustard);
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+
+.gal-overlay-inner h3 {
+  font-family: var(--font-serif-playfair);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.gal-artist {
+  font-family: var(--font-sans-montserrat);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(255, 252, 248, 0.8);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.gal-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--brand-primary);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.4rem;
+  border-radius: 50px;
+  font-family: var(--font-sans-montserrat);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(212, 93, 59, 0.3);
+  transition: all 0.3s ease;
+}
+
+.gal-view-btn:hover {
+  background: var(--brand-secondary);
+  box-shadow: 0 6px 18px rgba(212, 93, 59, 0.45);
+  transform: scale(1.05);
+}
+
+.gal-view-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.gal-view-btn:hover svg {
+  transform: scale(1.15);
+}
+
+/* Trigger overlay elements on hover */
+.gal-item:hover .gal-hover-overlay {
+  opacity: 1;
+}
+
+.gal-item:hover .gal-overlay-inner {
+  transform: translateY(0);
+}
+
+/* ── Empty State ──────────────────────────────────────────────────────── */
+.gal-empty {
+  text-align: center;
+  padding: 6rem 2rem;
+  color: var(--text-light);
+}
+
+.gal-empty svg {
+  margin-bottom: 1.5rem;
+  opacity: 0.6;
+}
+
+.gal-empty p {
+  font-family: var(--font-sans-montserrat);
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* ── Lightbox Overlay System ──────────────────────────────────────────── */
+.gal-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.4s ease;
+}
+
+.gal-lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gal-lb-backdrop {
+  position: fixed; /* Fixed viewport overlay prevents background showing on scroll */
+  inset: 0;
+  background: rgba(15, 13, 12, 0.985); /* Highly opaque dark velvet backdrop */
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
+  z-index: 1;
+}
+
+.gal-lb-container {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gal-lb-img-wrap {
+  position: relative;
+  max-height: 70vh;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  background: rgba(30, 27, 24, 0.2);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gal-lb-img {
+  max-height: 70vh;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Zoom scale support on image */
+.gal-lb-img.zoomed {
+  transform: scale(1.35);
+  cursor: zoom-out;
+}
+
+.gal-lb-img:not(.zoomed) {
+  cursor: zoom-in;
+}
+
+/* Lightbox caption layout */
+.gal-lb-caption {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--white);
+  max-width: 650px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.gal-lb-caption h3 {
+  font-family: var(--font-serif-playfair);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--white);
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.gal-lb-artist {
+  font-family: var(--font-sans-montserrat);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--brand-mustard);
+  margin: 0 0 1.5rem !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Structured Metadata Grid */
+.gal-lb-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin: 1.6rem auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.25rem 0;
+  max-width: 580px;
+}
+
+.gal-grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  text-align: center;
+}
+
+.gal-grid-label {
+  font-family: var(--font-sans-montserrat);
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.gal-grid-val {
+  font-family: var(--font-sans-montserrat);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(250, 246, 240, 0.95);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+#galLbCat {
+  font-weight: 600;
+  color: var(--white);
+}
+
+.gal-lb-desc {
+  font-family: var(--font-sans-montserrat);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: rgba(250, 246, 240, 0.76) !important;
+  margin: 0 auto 1rem !important;
+  max-width: 560px;
+  font-weight: 400;
+}
+
+.gal-lb-extra {
+  font-family: var(--font-sans-montserrat);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--brand-mustard) !important;
+  margin: 1rem auto 0 !important;
+  max-width: 560px;
+  font-weight: 500;
+  font-style: italic;
+  opacity: 0.95;
+  border-left: 2px solid var(--brand-primary);
+  padding-left: 12px;
+  text-align: left;
+  display: inline-block;
+}
+
+/* Circular back arrow button positioning (top-left) */
+.gal-lb-back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  background: rgba(30, 27, 24, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: all var(--transition-normal);
+}
+
+.gal-lb-back-btn:hover {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: var(--white);
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(212, 93, 59, 0.4);
+}
+
+.gal-lb-back-btn svg {
+  display: block;
+  transition: transform var(--transition-normal);
+}
+
+.gal-lb-back-btn:hover svg {
+  transform: translateX(-2px); /* subtle slide animation on hover */
+}
+
+/* Dimensions & extra metadata styling */
+.gal-lb-dims {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.gal-lb-extra {
+  font-family: var(--font-sans-montserrat);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--brand-mustard) !important;
+  margin: 0.8rem auto 0 !important;
+  max-width: 540px;
+  font-weight: 500;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Ensure padding-bottom on container details card so contents never overlap scroll bounds */
+.gal-lb-container {
+  padding-bottom: 3.5rem;
+  box-sizing: border-box;
+}
+
+/* Prevent body and html elements scrolling when details page overlay is active */
+html.overflow-hidden,
+body.overflow-hidden {
+  overflow: hidden !important;
+  height: 100% !important;
+}
+
+/* ── Responsiveness & Masonry tweaks ──────────────────────────────────── */
+@media (max-width: 1400px) {
+  .gal-lb-prev { left: -40px; }
+  .gal-lb-next { right: -40px; }
+}
+
+@media (max-width: 1200px) {
+  .gal-lb-container {
+    width: 85%;
+  }
+  .gal-lb-nav {
+    width: 44px;
+    height: 44px;
+  }
+  .gal-lb-prev { left: -55px; }
+  .gal-lb-next { right: -55px; }
+}
+
+@media (max-width: 992px) {
+  .gal-filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .gal-filter-track {
+    width: 100%;
+  }
+
+  .gal-lb-nav {
+    position: static;
+    transform: none;
+    margin: 0;
+  }
+
+  .gal-lb-prev:hover { transform: translateX(-3px); }
+  .gal-lb-next:hover { transform: translateX(3px); }
+
+  /* Reposition nav below on small screens */
+  .gal-lb-controls-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    z-index: 5;
+  }
+}
+
+@media (max-width: 768px) {
+  .gal-grid {
+    column-gap: 1.5rem;
+  }
+  .gal-item {
+    margin-bottom: 1.8rem;
+  }
+  .gal-frame {
+    padding: 0.9rem;
+  }
+  .gal-frame-corner {
+    display: none; /* Hide micro corners on small mobile touch cards */
+  }
+  .gal-hover-overlay {
+    inset: 0.9rem;
+  }
+  .gal-overlay-inner {
+    padding: 1rem;
+  }
+  .gal-overlay-inner h3 {
+    font-size: 1.25rem;
+  }
+  .gal-lb-caption h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gal-filters {
+    padding-bottom: 1rem;
+  }
+  .gal-filter-track {
+    gap: 0.5rem;
+  }
+  .gal-pill {
+    padding: 0.6rem 1.1rem;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* ==========================================================================
+   MOBILE GALLERY RESPONSIVE OVERRIDES (<= 480px & 360px Viewports)
+   ========================================================================== */
+@media (max-width: 480px) {
+  .gal-section {
+    padding: 3rem 4% !important;
+  }
+
+  .gal-filters {
+    margin-bottom: 2rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  /* Force single column masonry layout */
+  .gal-grid {
+    columns: 1 !important;
+    column-gap: 0 !important;
+  }
+
+  .gal-item {
+    margin-bottom: 1.5rem !important;
+    width: 100% !important;
+  }
+
+  .gal-frame {
+    padding: 0.8rem !important;
+  }
+
+  .gal-hover-overlay {
+    inset: 0.8rem !important;
+  }
+
+  /* Lightbox Mobile Enhancements */
+  .gal-lb-img-wrap {
+    max-height: 55vh !important;
+  }
+
+  .gal-lb-img {
+    max-height: 55vh !important;
+  }
+
+  .gal-lb-caption {
+    margin-top: 1.25rem !important;
+    padding: 0 10px !important;
+  }
+
+  .gal-lb-caption h3 {
+    font-size: 1.35rem !important;
+  }
+
+  .gal-lb-artist {
+    font-size: 0.78rem !important;
+    margin-bottom: 0.4rem !important;
+  }
+
+  /* Grid styles for mobile details panels */
+  .gal-lb-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.85rem !important;
+    margin: 1.2rem auto !important;
+    padding: 0.85rem 0 !important;
+  }
+  
+  .gal-grid-label {
+    font-size: 0.58rem !important;
+    letter-spacing: 1px !important;
+  }
+
+  .gal-grid-val {
+    font-size: 0.72rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .gal-lb-desc {
+    font-size: 0.75rem !important;
+    line-height: 1.45 !important;
+    margin-top: 0.4rem !important;
+  }
+
+  .gal-lb-extra {
+    font-size: 0.72rem !important;
+    line-height: 1.4 !important;
+    margin-top: 0.6rem !important;
+    padding-left: 8px !important;
+  }
+
+  .gal-lightbox {
+    align-items: flex-start !important;
+    overflow-y: auto !important;
+    padding: 85px 12px 40px !important;
+    box-sizing: border-box !important;
+  }
+
+  .gal-lb-back-btn {
+    top: 16px !important;
+    left: 16px !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .gal-filters {
+    gap: 1rem !important;
+  }
+
+  .gal-pill {
+    padding: 0.5rem 0.9rem !important;
+    font-size: 0.68rem !important;
+  }
+
+  .gal-lb-caption h3 {
+    font-size: 1.15rem !important;
+  }
+
+  .gal-lb-grid {
+    gap: 0.68rem !important;
+    margin: 0.8rem auto !important;
+  }
+}

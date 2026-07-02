@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore our curriculum of fine arts and design at Pencil Tip. We offer expert classes in sketching, oil painting, watercolor, ceramics, digital art, and children's craft.">
+  <title>Our Courses & Workshops | Pencil Tip Academy of Art</title>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER / NAVIGATION
+       ========================================== -->
+  <header class="inner-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="headerLogo">
+        <div class="logo-icon-wrap">
+          <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 70 C 10 50, 25 20, 60 20 C 85 20, 90 40, 80 60 C 70 80, 45 85, 30 80 C 15 75, 10 90, 20 90 C 35 90, 50 70, 75 70" fill="none" stroke="var(--brand-primary)" stroke-width="6" stroke-linecap="round" opacity="0.95"/>
+            <path d="M35 80 C 20 65, 35 35, 65 35 C 80 35, 80 50, 70 65" fill="none" stroke="var(--brand-secondary)" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+            <polygon points="70,30 80,40 50,70 40,60" fill="var(--bg-secondary)" stroke="var(--text-dark)" stroke-width="2.5" stroke-linejoin="round"/>
+            <polygon points="50,70 40,60 28,72" fill="#FAF6F0" stroke="var(--text-dark)" stroke-width="2.5" stroke-linejoin="round"/>
+            <polygon points="34,66 30,62 24,76" fill="var(--text-dark)" stroke="var(--text-dark)" stroke-width="1.5" stroke-linejoin="round"/>
+            <circle cx="85" cy="70" r="5" fill="var(--brand-primary)"/>
+            <circle cx="75" cy="85" r="4" fill="var(--brand-secondary)"/>
+            <circle cx="92" cy="45" r="3.5" fill="var(--accent)"/>
+          </svg>
+        </div>
+        <div class="logo-text">Pencil Tip<span>Academy of Art</span></div>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="courses.html" class="nav-link">Courses</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <!-- User Account -->
+      <div class="user-account" id="userAccount">
+        <button class="user-profile-btn" id="userProfileBtn" aria-label="Open user account menu" aria-expanded="false" aria-haspopup="true">
+          <svg class="user-avatar" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="22" fill="#F5EBE1"/>
+            <circle cx="22" cy="17" r="7" fill="#D45D3B" opacity="0.85"/>
+            <ellipse cx="22" cy="34" rx="11" ry="7" fill="#D45D3B" opacity="0.7"/>
+          </svg>
+        </button>
+        <div class="user-dropdown" id="userDropdown" role="menu" aria-label="User account menu">
+          <ul class="user-dropdown-links">
+            <li role="none"><a href="login.html" role="menuitem" class="user-dropdown-link login-btn">Login</a></li>
+            <li role="none"><a href="signup.html" role="menuitem" class="user-dropdown-link signup-btn">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hamburger" id="hamburgerMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- Mobile Navigation Drawer -->
+      <div class="mob-nav-dropdown" id="mobNavDropdown">
+        <button class="mob-close-btn" id="mobCloseBtn" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <ul class="mob-dropdown-links">
+          <li><a href="index.html" class="mob-dropdown-link nav-link">Home</a></li>
+          <li><a href="about.html" class="mob-dropdown-link nav-link">About</a></li>
+          <li><a href="courses.html" class="mob-dropdown-link nav-link">Courses</a></li>
+          <li><a href="gallery.html" class="mob-dropdown-link nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="mob-dropdown-link nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- Mobile Nav Overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ==========================================
+       INNER PAGE HERO — COURSES
+       ========================================== -->
+  <section class="inner-hero courses-hero" id="coursesHero">
+    <!-- Decorative corner geometric SVG art -->
+    <svg class="inner-hero-art top-left" width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 80 Q50 20 80 80 Q110 140 140 80" stroke="#E9C46A" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M20 100 Q50 40 80 100 Q110 160 140 100" stroke="#D45D3B" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.6"/>
+      <circle cx="30" cy="30" r="10" stroke="#E07A5F" stroke-width="1.5" fill="none"/>
+      <circle cx="130" cy="30" r="7" stroke="#FAF6F0" stroke-width="1" fill="none" opacity="0.7"/>
+      <rect x="60" y="10" width="40" height="4" rx="2" fill="#E9C46A" opacity="0.5"/>
+    </svg>
+    <svg class="inner-hero-art bottom-right" width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="80,10 150,130 10,130" stroke="#E9C46A" stroke-width="1.5" fill="none" stroke-dasharray="7 5"/>
+      <polygon points="80,35 130,110 30,110" stroke="#D45D3B" stroke-width="1" fill="none" opacity="0.5"/>
+      <circle cx="80" cy="80" r="15" stroke="#FAF6F0" stroke-width="1" fill="none" opacity="0.4"/>
+    </svg>
+    <!-- Main text content -->
+    <div class="inner-hero-content">
+      <span class="inner-hero-tag">Curriculum & Workshops</span>
+      <h1>Creative <span>Curriculum</span></h1>
+      <span class="inner-hero-divider"></span>
+      <p>Discover courses crafted to challenge your hands and expand your sight. Learn core theories, techniques, and release your true expression.</p>
+    </div>
+    <!-- Curved wave transition -->
+    <div class="inner-hero-wave">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z" fill="#FAF6F0"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       COURSES DIRECTORY SECTION
+       ========================================== -->
+  <section class="section-padding courses-section">
+    <!-- Category Filtering -->
+    <div class="filter-container reveal">
+      <button class="filter-btn active" data-filter="all">All Disciplines</button>
+      <button class="filter-btn" data-filter="painting-drawing">Painting & Drawing</button>
+      <button class="filter-btn" data-filter="digital-art">Digital Art</button>
+      <button class="filter-btn" data-filter="sculpture-clay">Sculpture & Ceramics</button>
+      <button class="filter-btn" data-filter="crafts-calligraphy">Crafts & Calligraphy</button>
+    </div>
+
+    <!-- Course Cards Grid -->
+    <div class="courses-grid">
+      <!-- Course 1: Oil Painting -->
+      <div class="course-card reveal" data-category="painting-drawing">
+        <div class="course-img-container">
+          <div class="course-img-wrapper">
+            <img src="images/course_oil.png" alt="Detail of brush blending oil paint canvas">
+            <div class="course-img-overlay"></div>
+          </div>
+          <span class="course-tag">Painting</span>
+          <div class="course-price-badge">
+            <span class="price-amount">$450</span>
+          </div>
+        </div>
+        <div class="course-content">
+          <div class="course-header-meta">
+            <span>
+              <svg class="meta-icon" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.85 2.22-.76 1.41z" />
+              </svg>
+              12 Weeks
+            </span>
+            <span class="meta-separator">•</span>
+            <span>Intermediate</span>
+          </div>
+          <h3 class="course-title">Classical Oil Painting Glazing</h3>
+          <p class="course-description">Gain mastery over oil layering, glaze transparency, value transitions, and surface canvas textures.</p>
+          <div class="course-footer-divider"></div>
+          <div class="course-footer">
+            <div class="course-instructor">
+              <div class="instructor-avatar-wrapper">
+                <img src="images/faculty_1.png" alt="Alejandro V." class="instructor-avatar">
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="instructor-info">
+                <span class="instructor-label">Instructor</span>
+                <span class="instructor-name">Alejandro V.</span>
+              </div>
+            </div>
+            <div class="course-rating-wrapper">
+              <div class="course-rating">
+                <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-count">(48)</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-enroll-container">
+            <a href="contact.html?course=oil" class="btn-enroll">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 2: Charcoal Sketching -->
+      <div class="course-card reveal" data-category="painting-drawing">
+        <div class="course-img-container">
+          <div class="course-img-wrapper">
+            <img src="images/course_sketch.png" alt="Fine art charcoal portrait rendering">
+            <div class="course-img-overlay"></div>
+          </div>
+          <span class="course-tag">Drawing</span>
+          <div class="course-price-badge">
+            <span class="price-amount">$320</span>
+          </div>
+        </div>
+        <div class="course-content">
+          <div class="course-header-meta">
+            <span>
+              <svg class="meta-icon" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.85 2.22-.76 1.41z" />
+              </svg>
+              8 Weeks
+            </span>
+            <span class="meta-separator">•</span>
+            <span>Beginner</span>
+          </div>
+          <h3 class="course-title">Anatomical Charcoal & Realism</h3>
+          <p class="course-description">Learn core measurements, gestural contours, volume shading, and portrait composition with live models.</p>
+          <div class="course-footer-divider"></div>
+          <div class="course-footer">
+            <div class="course-instructor">
+              <div class="instructor-avatar-wrapper">
+                <img src="images/faculty_1.png" alt="Elena Rostova" class="instructor-avatar">
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="instructor-info">
+                <span class="instructor-label">Instructor</span>
+                <span class="instructor-name">Elena Rostova</span>
+              </div>
+            </div>
+            <div class="course-rating-wrapper">
+              <div class="course-rating">
+                <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                <span class="rating-count">(64)</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-enroll-container">
+            <a href="contact.html?course=charcoal" class="btn-enroll">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 3: Watercolor Wash -->
+      <div class="course-card reveal" data-category="painting-drawing">
+        <div class="course-img-container">
+          <div class="course-img-wrapper">
+            <img src="images/course_watercolor.png" alt="Warm watercolor palette washes">
+            <div class="course-img-overlay"></div>
+          </div>
+          <span class="course-tag">Watercolor</span>
+          <div class="course-price-badge">
+            <span class="price-amount">$350</span>
+          </div>
+        </div>
+        <div class="course-content">
+          <div class="course-header-meta">
+            <span>
+              <svg class="meta-icon" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.85 2.22-.76 1.41z" />
+              </svg>
+              9 Weeks
+            </span>
+            <span class="meta-separator">•</span>
+            <span>Beginner</span>
+          </div>
+          <h3 class="course-title">Fluid Watercolor & Gradients</h3>
+          <p class="course-description">Master wet-on-wet flows, glazing, pigment sedimentation rules, and botanical landscapes.</p>
+          <div class="course-footer-divider"></div>
+          <div class="course-footer">
+            <div class="course-instructor">
+              <div class="instructor-avatar-wrapper">
+                <img src="images/faculty_2.png" alt="Elena Rostova" class="instructor-avatar">
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="instructor-info">
+                <span class="instructor-label">Instructor</span>
+                <span class="instructor-name">Elena Rostova</span>
+              </div>
+            </div>
+            <div class="course-rating-wrapper">
+              <div class="course-rating">
+                <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-count">(39)</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-enroll-container">
+            <a href="contact.html?course=watercolor" class="btn-enroll">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 4: Acrylic Abstract -->
+      <div class="course-card reveal" data-category="painting-drawing">
+        <div class="course-img-container">
+          <div class="course-img-wrapper">
+            <img src="images/gallery_abstract.png" alt="Terracotta abstract paint strokes">
+            <div class="course-img-overlay"></div>
+          </div>
+          <span class="course-tag">Acrylics</span>
+          <div class="course-price-badge">
+            <span class="price-amount">$400</span>
+          </div>
+        </div>
+        <div class="course-content">
+          <div class="course-header-meta">
+            <span>
+              <svg class="meta-icon" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.85 2.22-.76 1.41z" />
+              </svg>
+              10 Weeks
+            </span>
+            <span class="meta-separator">•</span>
+            <span>Intermediate</span>
+          </div>
+          <h3 class="course-title">Acrylic Abstracts & Textures</h3>
+          <p class="course-description">Utilize gel mediums, sand pastes, palette knives, and paint splatter layers to build sculptural compositions.</p>
+          <div class="course-footer-divider"></div>
+          <div class="course-footer">
+            <div class="course-instructor">
+              <div class="instructor-avatar-wrapper">
+                <img src="images/faculty_1.png" alt="Alejandro V." class="instructor-avatar">
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="instructor-info">
+                <span class="instructor-label">Instructor</span>
+                <span class="instructor-name">Alejandro V.</span>
+              </div>
+            </div>
+            <div class="course-rating-wrapper">
+              <div class="course-rating">
+                <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                <span class="rating-count">(41)</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-enroll-container">
+            <a href="contact.html?course=acrylic" class="btn-enroll">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 5: Digital Illustration -->
+      <div class="course-card reveal" data-category="digital-art">
+        <div class="course-img-container">
+          <div class="course-img-wrapper">
+            <img src="images/course_digital.png" alt="Tablet design workspace landscape art">
+            <div class="course-img-overlay"></div>
+          </div>
+          <span class="course-tag">Illustration</span>
+          <div class="course-price-badge">
+            <span class="price-amount">$480</span>
+          </div>
+        </div>
+        <div class="course-content">
+          <div class="course-header-meta">
+            <span>
+              <svg class="meta-icon" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.85 2.22-.76 1.41z" />
+              </svg>
+              10 Weeks
+            </span>
+            <span class="meta-separator">•</span>
+            <span>Advanced</span>
+          </div>
+          <h3 class="course-title">Concept Design & Digital Brushes</h3>
+          <p class="course-description">Uncover workflows of dynamic design. Learn digital colors, values, layer styling, and character design.</p>
+          <div class="course-footer-divider"></div>
+          <div class="course-footer">
+            <div class="course-instructor">
+              <div class="instructor-avatar-wrapper">
+                <img src="images/faculty_2.png" alt="Marcus Vane" class="instructor-avatar">
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="instructor-info">
+                <span class="instructor-label">Instructor</span>
+                <span class="instructor-name">Marcus Vane</span>
+              </div>
+            </div>
+            <div class="course-rating-wrapper">
+              <div class="course-rating">
+                <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-count">(52)</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-enroll-container">
+            <a href="contact.html?course=digital" class="btn-enroll">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 6: Graphic Design Foundations -->
+      <div class="course-card reveal" data-category="digital-art">
+        <div class="course-img-container">
+          <div class="course-img-wrapper">
+            <img src="images/studio_interior.png" alt="Bright design studio workspace">
+            <div class="course-img-overlay"></div>
+          </div>
+          <span class="course-tag">Design</span>
+          <div class="course-price-badge">
+            <span class="price-amount">$420</span>
+          </div>
+        </div>
+        <div class="course-content">
+          <div class="course-header-meta">
+            <span>
+              <svg class="meta-icon" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.85 2.22-.76 1.41z" />
+              </svg>
+              8 Weeks
+            </span>
+            <span class="meta-separator">•</span>
+            <span>Beginner</span>
+          </div>
+          <h3 class="course-title">Visual Identity & Typography</h3>
+          <p class="course-description">Understand grid systems, geometric hierarchy, logo creation, branding guidelines, and vector workflows.</p>
+          <div class="course-footer-divider"></div>
+          <div class="course-footer">
+            <div class="course-instructor">
+              <div class="instructor-avatar-wrapper">
+                <img src="images/faculty_2.png" alt="Marcus Vane" class="instructor-avatar">
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="instructor-info">
+                <span class="instructor-label">Instructor</span>
+                <span class="instructor-name">Marcus Vane</span>
+              </div>
+            </div>
+            <div class="course-rating-wrapper">
+              <div class="course-rating">
+                <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                <span class="rating-count">(31)</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-enroll-container">
+            <a href="contact.html?course=design" class="btn-enroll">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 7: Sculpture -->
+      <div class="course-card reveal" data-category="sculpture-clay">
+        <div class="course-img-container">
+          <div class="course-img-wrapper">
+            <img src="images/course_sculpture.png" alt="Hands forming wet clay sculpture shape">
+            <div class="course-img-overlay"></div>
+          </div>
+          <span class="course-tag">Sculpting</span>
+          <div class="course-price-badge">
+            <span class="price-amount">$500</span>
+          </div>
+        </div>
+        <div class="course-content">
+          <div class="course-header-meta">
+            <span>
+              <svg class="meta-icon" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.85 2.22-.76 1.41z" />
+              </svg>
+              12 Weeks
+            </span>
+            <span class="meta-separator">•</span>
+            <span>Advanced</span>
+          </div>
+          <h3 class="course-title">Classical Clay Portrait Sculpting</h3>
+          <p class="course-description">Learn structural armature setups, muscle lining, expression carving, and kiln firing guidelines.</p>
+          <div class="course-footer-divider"></div>
+          <div class="course-footer">
+            <div class="course-instructor">
+              <div class="instructor-avatar-wrapper">
+                <img src="images/faculty_2.png" alt="Marcus Vane" class="instructor-avatar">
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="instructor-info">
+                <span class="instructor-label">Instructor</span>
+                <span class="instructor-name">Marcus Vane</span>
+              </div>
+            </div>
+            <div class="course-rating-wrapper">
+              <div class="course-rating">
+                <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-count">(29)</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-enroll-container">
+            <a href="contact.html?course=sculpture" class="btn-enroll">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 8: Ceramics -->
+      <div class="course-card reveal" data-category="sculpture-clay">
+        <div class="course-img-container">
+          <div class="course-img-wrapper">
+            <img src="images/faculty_2.png" alt="Artist working pottery spinning wheel">
+            <div class="course-img-overlay"></div>
+          </div>
+          <span class="course-tag">Ceramics</span>
+          <div class="course-price-badge">
+            <span class="price-amount">$380</span>
+          </div>
+        </div>
+        <div class="course-content">
+          <div class="course-header-meta">
+            <span>
+              <svg class="meta-icon" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.85 2.22-.76 1.41z" />
+              </svg>
+              8 Weeks
+            </span>
+            <span class="meta-separator">•</span>
+            <span>Beginner</span>
+          </div>
+          <h3 class="course-title">Pottery Wheel & Glazing Basics</h3>
+          <p class="course-description">Melt clay centering, cylinder forming, foot trimming, slip decoration, and glass mineral glazing.</p>
+          <div class="course-footer-divider"></div>
+          <div class="course-footer">
+            <div class="course-instructor">
+              <div class="instructor-avatar-wrapper">
+                <img src="images/faculty_2.png" alt="Sophia Mitchell" class="instructor-avatar">
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="instructor-info">
+                <span class="instructor-label">Instructor</span>
+                <span class="instructor-name">Sophia M.</span>
+              </div>
+            </div>
+            <div class="course-rating-wrapper">
+              <div class="course-rating">
+                <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                <span class="rating-count">(45)</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-enroll-container">
+            <a href="contact.html?course=ceramics" class="btn-enroll">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 9: Calligraphy -->
+      <div class="course-card reveal" data-category="crafts-calligraphy">
+        <div class="course-img-container">
+          <div class="course-img-wrapper">
+            <img src="images/gallery_portrait.png" alt="Ink strokes sketch portrait frame">
+            <div class="course-img-overlay"></div>
+          </div>
+          <span class="course-tag">Lettering</span>
+          <div class="course-price-badge">
+            <span class="price-amount">$290</span>
+          </div>
+        </div>
+        <div class="course-content">
+          <div class="course-header-meta">
+            <span>
+              <svg class="meta-icon" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.85 2.22-.76 1.41z" />
+              </svg>
+              6 Weeks
+            </span>
+            <span class="meta-separator">•</span>
+            <span>Beginner</span>
+          </div>
+          <h3 class="course-title">Classical Ink Calligraphy</h3>
+          <p class="course-description">Familiarize yourself with copperplate scripts, broad edge pens, spacing metrics, and envelope flourishing.</p>
+          <div class="course-footer-divider"></div>
+          <div class="course-footer">
+            <div class="course-instructor">
+              <div class="instructor-avatar-wrapper">
+                <img src="images/faculty_2.png" alt="Elena Rostova" class="instructor-avatar">
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="instructor-info">
+                <span class="instructor-label">Instructor</span>
+                <span class="instructor-name">Elena Rostova</span>
+              </div>
+            </div>
+            <div class="course-rating-wrapper">
+              <div class="course-rating">
+                <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-count">(22)</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-enroll-container">
+            <a href="contact.html?course=calligraphy" class="btn-enroll">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 10: Mixed Media -->
+      <div class="course-card reveal" data-category="crafts-calligraphy">
+        <div class="course-img-container">
+          <div class="course-img-wrapper">
+            <img src="images/hero_art.png" alt="Art school colorful abstract layered paint">
+            <div class="course-img-overlay"></div>
+          </div>
+          <span class="course-tag">Mixed Media</span>
+          <div class="course-price-badge">
+            <span class="price-amount">$410</span>
+          </div>
+        </div>
+        <div class="course-content">
+          <div class="course-header-meta">
+            <span>
+              <svg class="meta-icon" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.85 2.22-.76 1.41z" />
+              </svg>
+              10 Weeks
+            </span>
+            <span class="meta-separator">•</span>
+            <span>Intermediate</span>
+          </div>
+          <h3 class="course-title">Collage & Textured Material Art</h3>
+          <p class="course-description">Combine paper fibers, textiles, gesso layers, and inks to build modern fine-art relief dimensions.</p>
+          <div class="course-footer-divider"></div>
+          <div class="course-footer">
+            <div class="course-instructor">
+              <div class="instructor-avatar-wrapper">
+                <img src="images/faculty_1.png" alt="Alejandro V." class="instructor-avatar">
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="instructor-info">
+                <span class="instructor-label">Instructor</span>
+                <span class="instructor-name">Alejandro V.</span>
+              </div>
+            </div>
+            <div class="course-rating-wrapper">
+              <div class="course-rating">
+                <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                <span class="rating-count">(18)</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-enroll-container">
+            <a href="contact.html?course=mixedmedia" class="btn-enroll">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 11: Children's Art -->
+      <div class="course-card reveal" data-category="crafts-calligraphy">
+        <div class="course-img-container">
+          <div class="course-img-wrapper">
+            <img src="images/course_watercolor.png" alt="Watercolor bright pigment paints flow">
+            <div class="course-img-overlay"></div>
+          </div>
+          <span class="course-tag">Youth</span>
+          <div class="course-price-badge">
+            <span class="price-amount">$250</span>
+          </div>
+        </div>
+        <div class="course-content">
+          <div class="course-header-meta">
+            <span>
+              <svg class="meta-icon" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.88L11 13V7h1.5v5.25l3.85 2.22-.76 1.41z" />
+              </svg>
+              8 Weeks
+            </span>
+            <span class="meta-separator">•</span>
+            <span>Kids</span>
+          </div>
+          <h3 class="course-title">Creative Youth Club (Ages 8-12)</h3>
+          <p class="course-description">Foster fine motor control and visual excitement using safe acrylic splatters, clay molding, and basic drawing grids.</p>
+          <div class="course-footer-divider"></div>
+          <div class="course-footer">
+            <div class="course-instructor">
+              <div class="instructor-avatar-wrapper">
+                <img src="images/faculty_1.png" alt="Elena Rostova" class="instructor-avatar">
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="instructor-info">
+                <span class="instructor-label">Instructor</span>
+                <span class="instructor-name">Elena Rostova</span>
+              </div>
+            </div>
+            <div class="course-rating-wrapper">
+              <div class="course-rating">
+                <span class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-count">(57)</span>
+              </div>
+            </div>
+          </div>
+          <div class="course-enroll-container">
+            <a href="contact.html?course=children" class="btn-enroll">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       PRIVATE TUTORING DETAILS BANNER
+       ========================================== -->
+  <section class="section-padding mentorship-section" style="background-color: var(--bg-secondary);">
+    <div class="mentorship-container reveal">
+      <div class="mentorship-text">
+        <span style="color: var(--brand-primary); font-weight:600; text-transform:uppercase; letter-spacing: 2px; font-size:0.85rem;">Customized Guidance</span>
+        <h2>Private 1-on-1 Portfolio Mentorship</h2>
+        <p style="color: var(--text-light); margin-bottom: 0;">Preparing for university application or setting up an independent gallery debut? Our master professors offer targeted private training, deep concept portfolio reviews, and custom schedule packages tailormade to your speed.</p>
+      </div>
+      <div class="mentorship-btn-wrap">
+        <a href="contact.html?type=private" class="btn btn-primary" id="privateMentoringBtn">Inquire About Sessions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-icon-wrap" style="margin-bottom: 1.25rem; justify-content: flex-start;">
+          <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 48px; height: 48px;">
+            <path d="M20 70 C 10 50, 25 20, 60 20 C 85 20, 90 40, 80 60 C 70 80, 45 85, 30 80 C 15 75, 10 90, 20 90 C 35 90, 50 70, 75 70" fill="none" stroke="var(--brand-primary)" stroke-width="6" stroke-linecap="round" opacity="0.95"/>
+            <path d="M35 80 C 20 65, 35 35, 65 35 C 80 35, 80 50, 70 65" fill="none" stroke="var(--brand-secondary)" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+            <polygon points="70,30 80,40 50,70 40,60" fill="var(--bg-secondary)" stroke="var(--text-dark)" stroke-width="2.5" stroke-linejoin="round"/>
+            <polygon points="50,70 40,60 28,72" fill="#FAF6F0" stroke="var(--text-dark)" stroke-width="2.5" stroke-linejoin="round"/>
+            <polygon points="34,66 30,62 24,76" fill="var(--text-dark)" stroke="var(--text-dark)" stroke-width="1.5" stroke-linejoin="round"/>
+            <circle cx="85" cy="70" r="5" fill="var(--brand-primary)"/>
+            <circle cx="75" cy="85" r="4" fill="var(--brand-secondary)"/>
+            <circle cx="92" cy="45" r="3.5" fill="var(--accent)"/>
+          </svg>
+        </div>
+        <h2 style="font-size: 1.8rem; color: var(--white); margin-bottom: 1rem; font-family: var(--font-serif-cormorant); letter-spacing: 2px;">PENCIL TIP</h2>
+        <p>A premier global fine art academy inspiring creative vision and technical masterpiece in classical and modern disciplines.</p>
+        <div class="footer-social-links">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Pinterest">PI</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+
+      <div class="footer-navigation">
+        <h4 class="footer-heading">Academy</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="courses.html">Our Courses</a></li>
+          <li><a href="gallery.html">Exhibitions</a></li>
+          <li><a href="about.html#instructors">Faculty Members</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-support">
+        <h4 class="footer-heading">Support</h4>
+        <ul class="footer-links">
+          <li><a href="about.html#faqs">Common FAQs</a></li>
+          <li><a href="contact.html">Physical Visits</a></li>
+          <li><a href="contact.html#enroll">Enrollment Info</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4 class="footer-heading">Find Us</h4>
+        <div class="footer-contact-info">
+          <p><span>Addr:</span> 48 Terracotta Blvd, Studio Block C, Art District, NY 10003</p>
+          <p><span>Phone:</span> +1 (212) 555-0814</p>
+          <p><span>Email:</span> contact@penciltip.edu</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pencil Tip Academy of Art. All Rights Reserved.</p>
+      <p>Designed with Artistic Care.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+    </svg>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Pencil Tip Academy of Art. Find studio hours, contact info, request enrollment slots, or schedule a physical tour.">
+  <title>Contact Our Studio | Pencil Tip Academy of Art</title>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER / NAVIGATION
+       ========================================== -->
+  <header class="inner-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="headerLogo">
+        <div class="logo-icon-wrap">
+          <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 70 C 10 50, 25 20, 60 20 C 85 20, 90 40, 80 60 C 70 80, 45 85, 30 80 C 15 75, 10 90, 20 90 C 35 90, 50 70, 75 70" fill="none" stroke="var(--brand-primary)" stroke-width="6" stroke-linecap="round" opacity="0.95"/>
+            <path d="M35 80 C 20 65, 35 35, 65 35 C 80 35, 80 50, 70 65" fill="none" stroke="var(--brand-secondary)" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+            <polygon points="70,30 80,40 50,70 40,60" fill="var(--bg-secondary)" stroke="var(--text-dark)" stroke-width="2.5" stroke-linejoin="round"/>
+            <polygon points="50,70 40,60 28,72" fill="#FAF6F0" stroke="var(--text-dark)" stroke-width="2.5" stroke-linejoin="round"/>
+            <polygon points="34,66 30,62 24,76" fill="var(--text-dark)" stroke="var(--text-dark)" stroke-width="1.5" stroke-linejoin="round"/>
+            <circle cx="85" cy="70" r="5" fill="var(--brand-primary)"/>
+            <circle cx="75" cy="85" r="4" fill="var(--brand-secondary)"/>
+            <circle cx="92" cy="45" r="3.5" fill="var(--accent)"/>
+          </svg>
+        </div>
+        <div class="logo-text">Pencil Tip<span>Academy of Art</span></div>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="courses.html" class="nav-link">Courses</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <!-- User Account -->
+      <div class="user-account" id="userAccount">
+        <button class="user-profile-btn" id="userProfileBtn" aria-label="Open user account menu" aria-expanded="false" aria-haspopup="true">
+          <svg class="user-avatar" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="22" fill="#F5EBE1"/>
+            <circle cx="22" cy="17" r="7" fill="#D45D3B" opacity="0.85"/>
+            <ellipse cx="22" cy="34" rx="11" ry="7" fill="#D45D3B" opacity="0.7"/>
+          </svg>
+        </button>
+        <div class="user-dropdown" id="userDropdown" role="menu" aria-label="User account menu">
+          <ul class="user-dropdown-links">
+            <li role="none"><a href="login.html" role="menuitem" class="user-dropdown-link login-btn">Login</a></li>
+            <li role="none"><a href="signup.html" role="menuitem" class="user-dropdown-link signup-btn">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hamburger" id="hamburgerMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- Mobile Navigation Drawer -->
+      <div class="mob-nav-dropdown" id="mobNavDropdown">
+        <button class="mob-close-btn" id="mobCloseBtn" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <ul class="mob-dropdown-links">
+          <li><a href="index.html" class="mob-dropdown-link nav-link">Home</a></li>
+          <li><a href="about.html" class="mob-dropdown-link nav-link">About</a></li>
+          <li><a href="courses.html" class="mob-dropdown-link nav-link">Courses</a></li>
+          <li><a href="gallery.html" class="mob-dropdown-link nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="mob-dropdown-link nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- Mobile Nav Overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ==========================================
+       INNER PAGE HERO — CONTACT
+       ========================================== -->
+  <section class="inner-hero contact-hero" id="contactHero">
+    <!-- Decorative corner geometric SVG art -->
+    <svg class="inner-hero-art top-left" width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15 85 Q55 15 85 85 Q115 155 155 85" stroke="#E9C46A" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M15 105 Q55 35 85 105 Q115 175 155 105" stroke="#D45D3B" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+      <circle cx="85" cy="85" r="40" stroke="#FAF6F0" stroke-width="0.8" fill="none" stroke-dasharray="5 5" opacity="0.45"/>
+      <circle cx="85" cy="85" r="20" stroke="#E07A5F" stroke-width="1" fill="none" opacity="0.4"/>
+      <line x1="45" y1="45" x2="125" y2="125" stroke="#FAF6F0" stroke-width="0.6" opacity="0.3"/>
+    </svg>
+    <svg class="inner-hero-art bottom-right" width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="75,10 140,120 10,120" stroke="#E9C46A" stroke-width="1.5" fill="none" stroke-dasharray="7 4"/>
+      <polygon points="75,30 120,105 30,105" stroke="#D45D3B" stroke-width="1" fill="none" opacity="0.5"/>
+      <rect x="55" y="70" width="40" height="30" rx="2" stroke="#FAF6F0" stroke-width="0.8" fill="none" opacity="0.35"/>
+    </svg>
+    <!-- Main text content -->
+    <div class="inner-hero-content">
+      <span class="inner-hero-tag">Reach Out to Us</span>
+      <h1>Connect With <span>Pencil Tip</span></h1>
+      <span class="inner-hero-divider"></span>
+      <p>Have questions about enrollment, syllabus details, or booking a private tour? Send us a message or visit our natural-light classrooms.</p>
+    </div>
+    <!-- Curved wave transition -->
+    <div class="inner-hero-wave">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z" fill="#FAF6F0"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONTACT SPLIT SECTION
+       ========================================== -->
+  <section class="section-padding" id="enroll">
+    <div class="contact-grid">
+      <!-- Contact Info Panel -->
+      <div class="contact-info-panel reveal">
+        <div class="watercolor-blob blob-orange" style="width: 250px; height: 250px; bottom: -50px; right: -50px; opacity: 0.1;"></div>
+        <h3>Studio Information</h3>
+        <p style="color: var(--text-light); margin-bottom: 2.5rem;">We are located in the heart of the artistic historic warehouse district. Stop by to view students working, browse our current lobby exhibitions, or audit a class.</p>
+        
+        <div class="contact-details-list">
+          <!-- Item 1: Address -->
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <h4>Physical Atelier</h4>
+              <p>48 Terracotta Blvd, Studio Block C, NY 10003</p>
+            </div>
+          </div>
+
+          <!-- Item 2: Phone -->
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <h4>Telephone lines</h4>
+              <p>+1 (212) 555-0814 &mdash; Mon-Sat (9am - 8pm)</p>
+            </div>
+          </div>
+
+          <!-- Item 3: Email -->
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <h4>Admissions Email</h4>
+              <p>admissions@penciltip.edu / contact@penciltip.edu</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-social-wrap">
+          <h4>Follow the Academy</h4>
+          <div class="contact-social-icons">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Pinterest">PI</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form Panel -->
+      <div class="contact-form-panel reveal">
+        <h3>Send a Message</h3>
+        <p style="color: var(--text-light); margin-bottom: 2.5rem;">Have specific questions or wish to book a campus tour? Fill out the details below, and an art advisor will contact you shortly.</p>
+        
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <input type="text" id="formName" class="form-control" placeholder=" " required autocomplete="name">
+            <label for="formName" class="form-label">Full Name *</label>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="formEmail" class="form-control" placeholder=" " required autocomplete="email">
+            <label for="formEmail" class="form-label">Email Address *</label>
+          </div>
+
+          <div class="form-group">
+            <input type="text" id="formSubject" class="form-control" placeholder=" ">
+            <label for="formSubject" class="form-label">Subject of Interest</label>
+          </div>
+
+          <div class="form-group">
+            <textarea id="formMessage" class="form-control" placeholder=" " required></textarea>
+            <label for="formMessage" class="form-label">Message Details *</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 0;" id="contactFormSubmit">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       INTERACTIVE MAP LOCATION
+       ========================================== -->
+  <section class="map-section reveal">
+    <div class="map-placeholder-container">
+      <div class="map-visual">
+        <div class="map-pin">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <h4>Art District, NYC</h4>
+        <p>48 Terracotta Blvd, Block C (Across from Modern Museum)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONTACT SPECIFIC FAQS
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--bg-secondary);">
+    <div class="section-header reveal">
+      <span class="subtitle">Quick Answers</span>
+      <h2>Visiting & Hours FAQ</h2>
+      <div class="art-divider"><span></span></div>
+    </div>
+
+    <div class="faq-container reveal">
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <div class="faq-header">
+          <h3>When are the studios open for public visits?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+          <p>We host guided tours every Tuesday and Thursday at 4 PM, and hold open studios on Saturdays from 11 AM to 3 PM. Booking an appointment via our form is recommended.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <div class="faq-header">
+          <h3>Is there parking space near the Brooklyn warehouse?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+          <p>Yes, street parking is available along Terracotta Blvd, and there is a commercial parking garage situated exactly two blocks north on Art District Lane.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <div class="faq-header">
+          <h3>How long does the enrollment process take?</h3>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+          <p>Once you submit your application form, our advisors review standard course slots and send out confirmation responses within 2 to 3 business days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-icon-wrap" style="margin-bottom: 1.25rem; justify-content: flex-start;">
+          <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 48px; height: 48px;">
+            <path d="M20 70 C 10 50, 25 20, 60 20 C 85 20, 90 40, 80 60 C 70 80, 45 85, 30 80 C 15 75, 10 90, 20 90 C 35 90, 50 70, 75 70" fill="none" stroke="var(--brand-primary)" stroke-width="6" stroke-linecap="round" opacity="0.95"/>
+            <path d="M35 80 C 20 65, 35 35, 65 35 C 80 35, 80 50, 70 65" fill="none" stroke="var(--brand-secondary)" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+            <polygon points="70,30 80,40 50,70 40,60" fill="var(--bg-secondary)" stroke="var(--text-dark)" stroke-width="2.5" stroke-linejoin="round"/>
+            <polygon points="50,70 40,60 28,72" fill="#FAF6F0" stroke="var(--text-dark)" stroke-width="2.5" stroke-linejoin="round"/>
+            <polygon points="34,66 30,62 24,76" fill="var(--text-dark)" stroke="var(--text-dark)" stroke-width="1.5" stroke-linejoin="round"/>
+            <circle cx="85" cy="70" r="5" fill="var(--brand-primary)"/>
+            <circle cx="75" cy="85" r="4" fill="var(--brand-secondary)"/>
+            <circle cx="92" cy="45" r="3.5" fill="var(--accent)"/>
+          </svg>
+        </div>
+        <h2 style="font-size: 1.8rem; color: var(--white); margin-bottom: 1rem; font-family: var(--font-serif-cormorant); letter-spacing: 2px;">PENCIL TIP</h2>
+        <p>A premier global fine art academy inspiring creative vision and technical masterpiece in classical and modern disciplines.</p>
+        <div class="footer-social-links">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Pinterest">PI</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+
+      <div class="footer-navigation">
+        <h4 class="footer-heading">Academy</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="courses.html">Our Courses</a></li>
+          <li><a href="gallery.html">Exhibitions</a></li>
+          <li><a href="about.html#instructors">Faculty Members</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-support">
+        <h4 class="footer-heading">Support</h4>
+        <ul class="footer-links">
+          <li><a href="about.html#faqs">Common FAQs</a></li>
+          <li><a href="contact.html">Physical Visits</a></li>
+          <li><a href="contact.html#enroll">Enrollment Info</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4 class="footer-heading">Find Us</h4>
+        <div class="footer-contact-info">
+          <p><span>Addr:</span> 48 Terracotta Blvd, Studio Block C, Art District, NY 10003</p>
+          <p><span>Phone:</span> +1 (212) 555-0814</p>
+          <p><span>Email:</span> contact@penciltip.edu</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pencil Tip Academy of Art. All Rights Reserved.</p>
+      <p>Designed with Artistic Care.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+    </svg>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
