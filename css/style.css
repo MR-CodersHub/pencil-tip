@@ -3569,6 +3569,24 @@ textarea.form-control {
   margin-bottom: 2.5rem;
 }
 
+/* About Page CTA — overrides the orange newsletter background
+   with the site's signature warm ivory gradient so the section
+   blends seamlessly with surrounding sections. */
+.about-cta-section {
+  background: linear-gradient(160deg, #FDF8F3 0%, #FAF5EF 50%, #F8F2EB 100%);
+  color: var(--text-dark);
+  border-top: 1px solid rgba(212, 93, 59, 0.08);
+}
+
+/* Ensure inherited white text rules are neutralised */
+.about-cta-section h2 {
+  color: var(--text-dark);
+}
+
+.about-cta-section p {
+  color: var(--text-light);
+}
+
 .newsletter-form {
   display: flex;
   max-width: 500px;
