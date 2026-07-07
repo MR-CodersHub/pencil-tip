@@ -608,3 +608,15 @@
     padding: 12px 20px;
   }
 }
+
+/* ==========================================
+   INSTANT ACTIVE, SMOOTH LEAVE HOVER EFFECT
+   ========================================== */
+.auth-back-btn:hover,
+.auth-back-btn:hover svg,
+.pwd-toggle-btn:hover,
+.auth-checkbox-label:hover input ~ .custom-checkbox,
+.auth-link:hover,
+.auth-btn:hover {
+  transition-duration: 0s !important;
+}

@@ -7004,3 +7004,60 @@ footer {
     font-size: 1.7rem !important; /* Slightly smaller title on 360px viewports */
   }
 }
+
+/* ==========================================
+   INSTANT ACTIVE, SMOOTH LEAVE HOVER EFFECT
+   ========================================== */
+a:hover,
+button:hover,
+.btn:hover,
+.nav-link:hover,
+.logo:hover,
+.hamburger:hover,
+.floating-card:hover,
+.course-card:hover,
+.filter-btn:hover,
+.workshop-row:hover,
+.timeline-item:hover,
+.timeline-content:hover,
+.faculty-card:hover,
+.faculty-socials a:hover,
+.featured-mentor-portrait:hover,
+.view-full-profile-btn:hover,
+.mentor-modal-close:hover,
+.mentor-profile-details .portfolio-links a:hover,
+.faq-item:hover,
+.faq-header:hover,
+.facility-tab-item:hover,
+.journey-card:hover,
+.journey-arrow:hover,
+.journey-dot:hover,
+.back-to-top:hover,
+.footer-links a:hover,
+.social-icon:hover,
+/* Children animated on parent hover */
+.logo:hover .logo-icon-wrap,
+.logo:hover .logo-text,
+.logo:hover .logo-text span,
+.nav-link:hover::before,
+.nav-link:hover::after,
+.course-card:hover .course-img-overlay,
+.course-card:hover .course-img-wrapper img,
+.course-card:hover .course-tag,
+.course-card:hover .course-price-badge,
+.course-card:hover .course-price-badge .price-amount,
+.course-card:hover .course-title,
+.course-card:hover .instructor-avatar,
+.course-card:hover .avatar-ring,
+.course-card:hover .instructor-name,
+.faculty-card:hover .faculty-img-wrapper img,
+.faculty-card:hover .faculty-socials,
+.featured-mentor-portrait:hover img,
+.featured-mentor-details .badge:hover,
+.featured-mentor-details .stat-item:hover,
+.featured-mentor-details .mentor-socials-row a:hover,
+.featured-mentor-details .mentor-socials-row a:hover::after,
+.journey-arrow-prev:hover svg,
+.journey-arrow-next:hover svg {
+  transition-duration: 0s !important;
+}

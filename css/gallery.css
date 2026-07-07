@@ -765,3 +765,18 @@ body.overflow-hidden {
     margin: 0.8rem auto !important;
   }
 }
+
+/* ==========================================
+   INSTANT ACTIVE, SMOOTH LEAVE HOVER EFFECT
+   ========================================== */
+.gal-pill:hover,
+.gal-view-btn:hover,
+.gal-item:hover,
+.gal-lb-back-btn:hover,
+.gal-lb-close-btn:hover,
+.gal-item:hover .gal-hover-overlay,
+.gal-item:hover .gal-overlay-inner,
+.gal-item:hover .gal-frame-corner,
+.gal-view-btn:hover svg {
+  transition-duration: 0s !important;
+}
