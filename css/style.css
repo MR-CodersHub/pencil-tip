@@ -3988,16 +3988,20 @@ footer {
     background: transparent;
     padding: 0;
     gap: 10px;
+    overflow: visible;
   }
 
   .newsletter-input {
     background: var(--white);
     box-shadow: var(--shadow-sm);
+    border-radius: 50px;
+    text-align: center;
   }
 
   .newsletter-btn {
     width: 100%;
     padding: 1.1rem;
+    border-radius: 50px;
   }
 
   .contact-info-panel,
@@ -5465,7 +5469,7 @@ footer {
     gap: 0.5rem;
   }
 
-  .mob-dropdown-link {
+  .mob-nav-dropdown .mob-dropdown-link.nav-link {
     display: block;
     width: 100%;
     padding: 14px 20px;
@@ -5483,8 +5487,8 @@ footer {
     transition: all var(--transition-normal);
   }
 
-  .mob-dropdown-link:hover,
-  .mob-dropdown-link.active {
+  .mob-nav-dropdown .mob-dropdown-link.nav-link:hover,
+  .mob-nav-dropdown .mob-dropdown-link.nav-link.active {
     color: var(--brand-primary);
     background: rgba(212, 93, 59, 0.06);
     border-color: rgba(212, 93, 59, 0.15);
